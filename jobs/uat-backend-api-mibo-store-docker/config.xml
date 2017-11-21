@@ -29,13 +29,11 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo &quot;hello&quot;
+      <command>sudo docker build . -t nuwarobotics/mibo-store-service
+sudo docker push nuwarobotics/mibo-store-service
 
-#sudo docker build . -t nuwarobotics/flask
-#sudo docker push nuwarobotics/flask
-
-#sudo docker build . -t nuwarobotics/flask:`date +&quot;%Y%m%d_%H%M&quot;`
-#sudo docker push nuwarobotics/flask:`date +&quot;%Y%m%d_%H%M&quot;`
+sudo docker build . -t nuwarobotics/mibo-store-service:`date +&quot;%Y%m%d_%H%M&quot;`
+sudo docker push nuwarobotics/mibo-store-service:`date +&quot;%Y%m%d_%H%M&quot;`
 
 #ssh root@uat-services &quot;cd /var/app/docker/ ; docker-compose pull flask&quot;
 #ssh root@uat-services &quot;cd /var/app/docker/ ; docker-compose stop flask&quot;
