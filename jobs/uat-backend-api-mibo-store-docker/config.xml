@@ -29,7 +29,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>sudo docker build . -t nuwarobotics/mibo-store-service
+      <command>chmod 600 gitea_key 
+
+sudo docker build . -t nuwarobotics/mibo-store-service
 sudo docker push nuwarobotics/mibo-store-service
 
 sudo docker build . -t nuwarobotics/mibo-store-service:`date +&quot;%Y%m%d_%H%M&quot;`
