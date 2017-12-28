@@ -20,7 +20,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>uat</assignedNode>
+  <assignedNode>dev</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -34,7 +34,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=uat-chatbotroom
+      <command>name=dev-chatbotroom
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 
@@ -380,7 +380,7 @@ sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
         </hudson.plugins.emailext.plugins.trigger.FixedUnhealthyTrigger>
       </configuredTriggers>
       <contentType>text/html</contentType>
-      <defaultSubject>uat-chatbotroom</defaultSubject>
+      <defaultSubject>dev-chatbotroom</defaultSubject>
       <defaultContent>$DEFAULT_CONTENT</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
