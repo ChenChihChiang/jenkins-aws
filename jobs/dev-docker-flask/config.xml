@@ -385,7 +385,7 @@ sudo docker push cnbj-repo.cloud.mi.com/nuwa/flask:$version
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
       <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
       <attachBuildLog>true</attachBuildLog>
-      <compressBuildLog>true</compressBuildLog>
+      <compressBuildLog>false</compressBuildLog>
       <replyTo>$DEFAULT_REPLYTO</replyTo>
       <saveOutput>false</saveOutput>
       <disabled>false</disabled>
