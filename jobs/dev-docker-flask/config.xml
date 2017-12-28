@@ -36,7 +36,7 @@
     <hudson.tasks.Shell>
       <command>version=`date +&quot;%Y%m%d_%H%M&quot;`
 
-sudo docker login -u chenjohn -p nuWA88**
+#sudo docker login -u chenjohn -p nuWA88**
 
 sudo docker build . -t nuwarobotics/flask
 sudo docker push nuwarobotics/flask:latest
@@ -46,7 +46,7 @@ sudo docker build . -t nuwarobotics/flask:$version
 sudo docker push nuwarobotics/flask:$version
 sudo docker tag nuwarobotics/flask:$version cnbj-repo.cloud.mi.com/nuwa/flask:$version
 
-sudo docker login cnbj-repo.cloud.mi.com -u nuwa-user1 -p nuwa1qazP
+#sudo docker login cnbj-repo.cloud.mi.com -u nuwa-user1 -p nuwa1qazP
 sudo docker push cnbj-repo.cloud.mi.com/nuwa/flask:latest
 sudo docker push cnbj-repo.cloud.mi.com/nuwa/flask:$version
 
