@@ -34,7 +34,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=chatbotroom
+      <command>name=uat-chatbotroom
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 
@@ -380,7 +380,7 @@ sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
         </hudson.plugins.emailext.plugins.trigger.FixedUnhealthyTrigger>
       </configuredTriggers>
       <contentType>text/html</contentType>
-      <defaultSubject>dev-docker-flask</defaultSubject>
+      <defaultSubject>uat-chatbotroom</defaultSubject>
       <defaultContent>$DEFAULT_CONTENT</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
