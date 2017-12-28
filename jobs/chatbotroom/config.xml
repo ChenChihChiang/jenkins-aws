@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.com:john.chen/flask.git</url>
+        <url>root@gitea.nuwarobotics.com:nuwarobotics/chatbotroom.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -20,7 +20,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>dev</assignedNode>
+  <assignedNode>uat</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -34,21 +34,22 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>version=`date +&quot;%Y%m%d_%H%M&quot;`
+      <command>name=chatbotroom
+version=`date +&quot;%Y%m%d_%H%M&quot;`
 
-#sudo docker login -u chenjohn -p nuWA88**
 
-sudo docker build . -t nuwarobotics/flask
-sudo docker push nuwarobotics/flask:latest
-sudo docker tag nuwarobotics/flask:latest cnbj-repo.cloud.mi.com/nuwa/flask:latest
+sudo docker build . -t nuwarobotics/$name
+sudo docker push nuwarobotics/$name:latest
+sudo docker tag nuwarobotics/$name:latest cnbj-repo.cloud.mi.com/nuwa/$name:latest
 
-sudo docker build . -t nuwarobotics/flask:$version
-sudo docker push nuwarobotics/flask:$version
-sudo docker tag nuwarobotics/flask:$version cnbj-repo.cloud.mi.com/nuwa/flask:$version
 
-#sudo docker login cnbj-repo.cloud.mi.com -u nuwa-user1 -p nuwa1qazP
-sudo docker push cnbj-repo.cloud.mi.com/nuwa/flask:latest
-sudo docker push cnbj-repo.cloud.mi.com/nuwa/flask:$version
+sudo docker build . -t nuwarobotics/$name:$version
+sudo docker push nuwarobotics/$name:$version
+sudo docker tag nuwarobotics/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:$version
+
+
+sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
+sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
 
 #ssh root@dev-services &quot;cd /var/app/docker/ ; docker-compose -f dev-docker.yaml pull flask&quot;
