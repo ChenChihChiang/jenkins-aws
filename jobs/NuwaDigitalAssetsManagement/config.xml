@@ -34,7 +34,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=NuwaDigitalAssetsManagement
+      <command>name=nuwadigitalassetsmanagement
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 
