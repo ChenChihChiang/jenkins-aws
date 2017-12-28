@@ -29,18 +29,28 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo &quot;hello&quot;
+      <command>name=dev-backend-api-mibo-store
+version=`date +&quot;%Y%m%d_%H%M&quot;`
 
-#sudo docker build . -t nuwarobotics/flask
-#sudo docker push nuwarobotics/flask
 
-#sudo docker build . -t nuwarobotics/flask:`date +&quot;%Y%m%d_%H%M&quot;`
-#sudo docker push nuwarobotics/flask:`date +&quot;%Y%m%d_%H%M&quot;`
+sudo docker build . -t nuwarobotics/$name
+sudo docker push nuwarobotics/$name:latest
+sudo docker tag nuwarobotics/$name:latest cnbj-repo.cloud.mi.com/nuwa/$name:latest
 
-#ssh root@uat-services &quot;cd /var/app/docker/ ; docker-compose pull flask&quot;
-#ssh root@uat-services &quot;cd /var/app/docker/ ; docker-compose stop flask&quot;
-#ssh root@uat-services &quot;cd /var/app/docker/ ; docker-compose rm -f flask&quot;
-#ssh root@uat-services &quot;cd /var/app/docker/ ; docker-compose up -d flask&quot;</command>
+
+sudo docker build . -t nuwarobotics/$name:$version
+sudo docker push nuwarobotics/$name:$version
+sudo docker tag nuwarobotics/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:$version
+
+
+sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
+sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+
+
+#ssh root@dev-services &quot;cd /var/app/docker/ ; docker-compose -f dev-docker.yaml pull flask&quot;
+#ssh root@dev-services &quot;cd /var/app/docker/ ; docker-compose -f dev-docker.yaml stop flask&quot;
+#ssh root@dev-services &quot;cd /var/app/docker/ ; docker-compose -f dev-docker.yaml rm -f flask&quot;
+#ssh root@dev-services &quot;cd /var/app/docker/ ; docker-compose -f dev-docker.yaml up -d flask&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
