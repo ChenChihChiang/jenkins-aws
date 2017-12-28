@@ -374,8 +374,8 @@ sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
           </email>
         </hudson.plugins.emailext.plugins.trigger.FixedUnhealthyTrigger>
       </configuredTriggers>
-      <contentType>default</contentType>
-      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <contentType>text/plain</contentType>
+      <defaultSubject>uat-backend-api-mibo-store-docker</defaultSubject>
       <defaultContent>$DEFAULT_CONTENT</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
