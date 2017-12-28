@@ -59,7 +59,7 @@ sudo docker push cnbj-repo.cloud.mi.com/nuwa/flask:$version
   </builders>
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.60">
-      <recipientList>$DEFAULT_RECIPIENTS</recipientList>
+      <recipientList>chihchinag@gmail.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.AbortedTrigger>
           <email>
@@ -378,14 +378,14 @@ sudo docker push cnbj-repo.cloud.mi.com/nuwa/flask:$version
           </email>
         </hudson.plugins.emailext.plugins.trigger.FixedUnhealthyTrigger>
       </configuredTriggers>
-      <contentType>default</contentType>
-      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <contentType>text/html</contentType>
+      <defaultSubject>dev-docker-flask</defaultSubject>
       <defaultContent>$DEFAULT_CONTENT</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
       <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
       <attachBuildLog>true</attachBuildLog>
-      <compressBuildLog>false</compressBuildLog>
+      <compressBuildLog>true</compressBuildLog>
       <replyTo>$DEFAULT_REPLYTO</replyTo>
       <saveOutput>false</saveOutput>
       <disabled>false</disabled>
