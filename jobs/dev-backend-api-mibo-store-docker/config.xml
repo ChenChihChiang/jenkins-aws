@@ -32,6 +32,7 @@
       <command>name=dev-backend-api-mibo-store
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
+chmod 400 gitea_key
 
 sudo docker build . -t nuwarobotics/$name
 sudo docker push nuwarobotics/$name:latest
