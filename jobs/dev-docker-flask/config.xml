@@ -35,7 +35,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>sudo docker build . -t nuwarobotics/flask
-sudo docker push nuwarobotics/flask
+sudo docker push nuwarobotics/flask:latest
 
 sudo docker build . -t nuwarobotics/flask:`date +&quot;%Y%m%d_%H%M&quot;`
 sudo docker push nuwarobotics/flask:`date +&quot;%Y%m%d_%H%M&quot;`
