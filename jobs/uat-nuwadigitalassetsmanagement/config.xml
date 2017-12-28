@@ -379,8 +379,8 @@ sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
           </email>
         </hudson.plugins.emailext.plugins.trigger.FixedUnhealthyTrigger>
       </configuredTriggers>
-      <contentType>text/html</contentType>
-      <defaultSubject>dev-docker-flask</defaultSubject>
+      <contentType>text/plain</contentType>
+      <defaultSubject>uat-nuwadigitalassetsmanagement</defaultSubject>
       <defaultContent>$DEFAULT_CONTENT</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
