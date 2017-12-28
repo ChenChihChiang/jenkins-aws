@@ -379,7 +379,7 @@ sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
           </email>
         </hudson.plugins.emailext.plugins.trigger.FixedUnhealthyTrigger>
       </configuredTriggers>
-      <contentType>text/html</contentType>
+      <contentType>text/plain</contentType>
       <defaultSubject>uat-chatbotroom</defaultSubject>
       <defaultContent>$DEFAULT_CONTENT</defaultContent>
       <attachmentsPattern></attachmentsPattern>
