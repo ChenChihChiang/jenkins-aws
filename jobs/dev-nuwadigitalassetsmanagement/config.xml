@@ -20,7 +20,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>uat</assignedNode>
+  <assignedNode>dev</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -34,7 +34,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=uat-nuwadigitalassetsmanagement
+      <command>name=dev-nuwadigitalassetsmanagement
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 
