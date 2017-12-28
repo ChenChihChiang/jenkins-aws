@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.com:john.chen/flask.git</url>
+        <url>root@gitea.nuwarobotics.com:nuwarobotics/NuwaDigitalAssetsManagement.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -20,7 +20,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>dev</assignedNode>
+  <assignedNode>uat</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -34,7 +34,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=flask
+      <command>name=NuwaDigitalAssetsManagement
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 
