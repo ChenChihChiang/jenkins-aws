@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.com:nuwarobotics/backend-api-mibo-store-docker.git</url>
+        <url>root@gitea.nuwarobotics.com:nuwarobotics/backend-api-mibo-store.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
