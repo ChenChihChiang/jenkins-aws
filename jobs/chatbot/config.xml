@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.com:nuwarobotics/chatbotroom.git</url>
+        <url>root@gitea.nuwarobotics.com:nuwarobotics/chatbot.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -20,7 +20,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>dev</assignedNode>
+  <assignedNode>uat</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -34,13 +34,14 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=dev-chatbotroom
+      <command>name=uat-chatbot
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 
 sudo docker build . -t nuwarobotics/$name
 sudo docker push nuwarobotics/$name:latest
 sudo docker tag nuwarobotics/$name:latest cnbj-repo.cloud.mi.com/nuwa/$name:latest
+sudo docker tag nuwarobotics/$name:latest cnbj-repo.cloud.mi.com/nuwa/$name:gpu
 
 
 sudo docker build . -t nuwarobotics/$name:$version
@@ -50,6 +51,7 @@ sudo docker tag nuwarobotics/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:$v
 
 sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
 sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu
 
 
 #ssh root@dev-services &quot;cd /var/app/docker/ ; docker-compose -f dev-docker.yaml pull flask&quot;
