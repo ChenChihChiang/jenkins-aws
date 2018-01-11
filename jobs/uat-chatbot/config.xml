@@ -62,7 +62,7 @@ sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu
   </builders>
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.60">
-      <recipientList>chihchinag@gmail.com</recipientList>
+      <recipientList>chihchinag@gmail.com, lin.blues@nuwarobotics.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.AbortedTrigger>
           <email>
