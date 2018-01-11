@@ -35,7 +35,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>name=uat-chatbot
-version=`date +&quot;%Y%m%d_%H%M&quot;`
+version=`date +&quot;%Y%m%d_%H%M&quot;`_gpu
 
 
 # build docker image
@@ -49,9 +49,9 @@ sudo docker tag nuwarobotics/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name:gpu
 sudo docker tag nuwarobotics/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
 #push image to docker-hub, mi
-sudo docker push nuwarobotics/$name:$version_gpu
+sudo docker push nuwarobotics/$name:$version
 sudo docker push nuwarobotics/$name:gpu
-sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version_gpu
+sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu
 
 
