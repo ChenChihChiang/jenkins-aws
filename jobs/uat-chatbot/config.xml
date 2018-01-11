@@ -39,7 +39,7 @@ version=`date +&quot;%Y%m%d_%H%M&quot;`_gpu
 
 
 # build docker image
-sudo docker build -f ./Dockerfile.gpu -t nuwarobotics/$name:gpu
+sudo docker build $WORKSPACE/Dockerfile.gpu -t nuwarobotics/$name:gpu
 
 # tag docker-hub gpu, version
 sudo docker tag nuwarobotics/$name:gpu nuwarobotics/$name:$version
