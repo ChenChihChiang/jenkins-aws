@@ -385,7 +385,7 @@ sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu
         </hudson.plugins.emailext.plugins.trigger.FixedUnhealthyTrigger>
       </configuredTriggers>
       <contentType>text/html</contentType>
-      <defaultSubject></defaultSubject>
+      <defaultSubject>uat-chatbot</defaultSubject>
       <defaultContent>$DEFAULT_CONTENT</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
