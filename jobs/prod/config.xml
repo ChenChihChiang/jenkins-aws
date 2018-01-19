@@ -78,24 +78,18 @@
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
-        <hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
           <name>HOST_PORT</name>
           <description></description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>80</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
-        <hudson.model.ChoiceParameterDefinition>
+          <defaultValue>80</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
           <name>CONAINER_PORT</name>
           <description></description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>80</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
+          <defaultValue>80</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
           <name>SERVICE</name>
           <description></description>
