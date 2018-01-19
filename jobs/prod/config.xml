@@ -20,7 +20,7 @@
           </choices>
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
-          <name>Memory</name>
+          <name>MEMORY</name>
           <description></description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
@@ -43,7 +43,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo &quot;prod&quot;</command>
+      <command>echo &quot;prod&quot;
+echo $CPU
+echo $MEMORY</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
