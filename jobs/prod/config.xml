@@ -165,14 +165,12 @@
   <builders>
     <hudson.tasks.Shell>
       <command>echo &quot;prod&quot;
-echo $CPU 
-echo $MEMORY 
-echo $BUILD_NUMBER 
 
 cat /root/mi/flask2.json | sed &apos;s/&quot;memoryLimitInMb&quot;: 1024/&quot;memoryLimitInMb&quot;: &apos;$MEMORY&apos;/g&apos; &gt; /root/mi/aaaa.json
+cat /root/mi/flask2.json | sed &apos;s/&quot;name&quot;: &quot;flask2&quot;,:/&quot;name&quot;: &apos;$NAME&apos;,/g&apos; &gt; bbbb.json
 
-/root/mi/login_mi.sh
-/root/mi/micloud app create -f /root/mi/aaaa.json</command>
+#/root/mi/login_mi.sh
+#/root/mi/micloud app create -f /root/mi/aaaa.json</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
