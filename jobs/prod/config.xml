@@ -48,10 +48,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>echo &quot;prod&quot;
-rm -rf f.json
-echo $CPU &gt; f.json
-echo $MEMORY &gt; f.json
-echo $BUILD_NUMBER &gt; f.json</command>
+echo $CPU 
+echo $MEMORY 
+echo $BUILD_NUMBER </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
