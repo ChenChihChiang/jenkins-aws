@@ -48,6 +48,8 @@ echo $CPU
 echo $MEMORY 
 echo $BUILD_NUMBER 
 
+cat /root/mi/nginx.tmp &gt; /root/mi/nginx.json
+
 /root/mi/login_mi.sh
 /root/mi/micloud app create -f /root/mi/nginx.json</command>
     </hudson.tasks.Shell>
