@@ -167,7 +167,7 @@
       <command>echo &quot;prod&quot;
 
 /usr/bin/cat /root/mi/flask2.json | /usr/bin/sed &apos;s/&quot;memoryLimitInMb&quot;: 1024/&quot;memoryLimitInMb&quot;: &apos;$MEMORY&apos;/g&apos; &gt; /root/mi/aaaa.json
-/usr/bin/cat /root/mi/aaaa.json | /usr/bin/sed &apos;s/&quot;name&quot;: &quot;flask2&quot;:/&quot;name&quot;: &apos;$NAME&apos;/g&apos; &gt; root/mi/aaaa.json
+/usr/bin/cat /root/mi/aaaa.json | /usr/bin/sed &apos;s/&quot;name&quot;: &quot;flask2&quot;:/&quot;name&quot;: &apos;$NAME&apos;/g&apos; &gt; /root/mi/aaaa.json
 
 #/root/mi/login_mi.sh
 #/root/mi/micloud app create -f /root/mi/aaaa.json</command>
