@@ -39,18 +39,16 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>H/2 * * * *</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>echo &quot;prod&quot;
 echo $CPU 
 echo $MEMORY 
-echo $BUILD_NUMBER </command>
+echo $BUILD_NUMBER 
+/root/mi.sh
+/root/micloud app create -f micloud.json</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
