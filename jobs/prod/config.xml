@@ -48,10 +48,10 @@ echo $CPU
 echo $MEMORY 
 echo $BUILD_NUMBER 
 
-cat /root/mi/nginx.tmp &gt; /root/mi/nginx.json
+cat flask2.json | sed &apos;s/&quot;memoryLimitInMb&quot;: 1024/ &quot;memoryLimitInMb&quot;: $MEMORY/g&apos; &gt; aaaa
 
-/root/mi/login_mi.sh
-/root/mi/micloud app create -f /root/mi/nginx.json</command>
+#/root/mi/login_mi.sh
+#/root/mi/micloud app create -f /root/mi/nginx.json</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
