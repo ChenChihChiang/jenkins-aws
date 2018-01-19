@@ -51,8 +51,8 @@ echo $MEMORY</command>
   <publishers>
     <org.jenkinsci.plugins.fluentd.Fluentd plugin="fluentd@0.1.3">
       <tag>prod</tag>
-      <json></json>
-      <fileName></fileName>
+      <json>bb</json>
+      <fileName>aa</fileName>
       <failBuild>true</failBuild>
     </org.jenkinsci.plugins.fluentd.Fluentd>
   </publishers>
