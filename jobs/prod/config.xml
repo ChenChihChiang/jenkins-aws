@@ -31,10 +31,12 @@
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
-        <hudson.model.FileParameterDefinition>
+        <hudson.model.StringParameterDefinition>
           <name>IMAGE</name>
           <description></description>
-        </hudson.model.FileParameterDefinition>
+          <defaultValue></defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
           <name>SECRET</name>
           <description></description>
@@ -44,15 +46,12 @@
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
-        <hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
           <name>COMMAND</name>
-          <description></description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>[&apos;/bin/bash&apos;,&apos;-c&apos;]</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
+          <description>[&apos;/bin/bash&apos;,&apos;-c&apos;]</description>
+          <defaultValue>[&apos;/bin/bash&apos;,&apos;-c&apos;]</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>ARGUMENT</name>
           <description></description>
