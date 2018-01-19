@@ -34,7 +34,7 @@
         <hudson.model.StringParameterDefinition>
           <name>IMAGE</name>
           <description></description>
-          <defaultValue></defaultValue>
+          <defaultValue>cnbj-repo.cloud.mi.com/nuwa/flask</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -48,7 +48,7 @@
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>COMMAND</name>
-          <description>[&apos;/bin/bash&apos;,&apos;-c&apos;]</description>
+          <description></description>
           <defaultValue>[&apos;/bin/bash&apos;,&apos;-c&apos;]</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
