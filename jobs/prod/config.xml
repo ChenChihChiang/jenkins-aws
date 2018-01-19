@@ -164,7 +164,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo STATE=$STATE
+      <command>#echo STATE=$STATE
 echo NAME=$NAME
 echo NAMESPACE=$NAMESPACE
 echo IMAGE=$IMAGE
@@ -179,9 +179,11 @@ echo SERVICE=$SERVICE
 echo SERVICE_NAME=$SERVICE_NAME
 echo DOMAIN=$DOMAIN
 echo PATH=$PATH
-echo KEY1=$KEY1
-echo VALUE1=$VALUE1
+#echo KEY1=$KEY1
+#echo VALUE1=$VALUE1
 echo REPLICAS=$REPLICAS
+
+/usr/bin/python /root/mi/create_app.py $NAME $NAMESPACE $IMAGE $SECRET $COMMAND $ARGUMENT $MEMORY $PROTOCOL $HOST_PORT $CONTAINER_PORT $SERVICE $SERVICE_NAME $DOMAIN $PATH $REPLICAS
 </command>
     </hudson.tasks.Shell>
   </builders>
