@@ -47,8 +47,8 @@
 echo $CPU 
 echo $MEMORY 
 echo $BUILD_NUMBER 
-/root/mi.sh
-/root/micloud app create -f micloud.json</command>
+/root/micloud/mi.sh
+/root/micloud/micloud app create -f micloud.json</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
