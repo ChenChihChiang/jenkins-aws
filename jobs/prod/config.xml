@@ -85,7 +85,7 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>CONAINER_PORT</name>
+          <name>CONTAINER_PORT</name>
           <description></description>
           <defaultValue>80</defaultValue>
           <trim>false</trim>
