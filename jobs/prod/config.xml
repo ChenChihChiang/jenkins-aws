@@ -33,7 +33,7 @@ echo $CPU
 echo $MEMORY 
 echo $BUILD_NUMBER 
 
-cat /root/mi/flask2.json | sed &apos;s/&quot;memoryLimitInMb&quot;: 1024/&quot;memoryLimitInMb&quot;: $MEMORY/g&apos; &gt; /root/mi/aaaa.json
+cat /root/mi/flask2.json | sed &apos;s/&quot;memoryLimitInMb&quot;: 1024/&quot;memoryLimitInMb&quot;: &apos;$MEMORY&apos;/g&apos; &gt; /root/mi/aaaa.json
 
 /root/mi/login_mi.sh
 /root/mi/micloud app create -f /root/mi/aaaa.json</command>
