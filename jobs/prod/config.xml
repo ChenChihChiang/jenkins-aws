@@ -61,7 +61,5 @@ echo $BUILD_NUMBER </command>
       <failBuild>true</failBuild>
     </org.jenkinsci.plugins.fluentd.Fluentd>
   </publishers>
-  <buildWrappers>
-    <org.jenkinsci.plugins.builduser.BuildUser plugin="build-user-vars-plugin@1.5"/>
-  </buildWrappers>
+  <buildWrappers/>
 </project>
