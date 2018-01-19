@@ -7,25 +7,10 @@
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.ChoiceParameterDefinition>
-          <name>CPU</name>
-          <description>CPU</description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>1</string>
-              <string>2</string>
-              <string>3</string>
-              <string>4</string>
-              <string>5</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
-        <hudson.model.ChoiceParameterDefinition>
           <name>MEMORY</name>
           <description>MEMORY</description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
-              <string>1024</string>
-              <string>2048</string>
               <string>4096</string>
             </a>
           </choices>
@@ -48,7 +33,7 @@ echo $CPU
 echo $MEMORY 
 echo $BUILD_NUMBER 
 
-cat /root/mi/flask2.json | sed &apos;s/&quot;memoryLimitInMb&quot;: 1024/ &quot;memoryLimitInMb&quot;: $MEMORY/g&apos; &gt; /root/mi/aaaa.json
+cat /root/mi/flask2.json | sed &apos;s/&quot;memoryLimitInMb&quot;: 1024/&quot;memoryLimitInMb&quot;: $MEMORY/g&apos; &gt; /root/mi/aaaa.json
 
 /root/mi/login_mi.sh
 /root/mi/micloud app create -f /root/mi/aaaa.json</command>
