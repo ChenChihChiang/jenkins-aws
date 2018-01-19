@@ -134,7 +134,7 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
-          <name>REPLICA</name>
+          <name>REPLICAS</name>
           <description></description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
@@ -181,17 +181,10 @@ echo DOMAIN=$DOMAIN
 echo PATH=$PATH
 echo KEY1=$KEY1
 echo VALUE1=$VALUE1
-echo REPLICA=$REPLICA
+echo REPLICAS=$REPLICAS
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <org.jenkinsci.plugins.fluentd.Fluentd plugin="fluentd@0.1.3">
-      <tag>prod</tag>
-      <json></json>
-      <fileName>f.json</fileName>
-      <failBuild>true</failBuild>
-    </org.jenkinsci.plugins.fluentd.Fluentd>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>
