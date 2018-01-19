@@ -19,7 +19,7 @@
         <hudson.model.StringParameterDefinition>
           <name>NAME</name>
           <description></description>
-          <defaultValue>flask2</defaultValue>
+          <defaultValue>nginx1</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -34,7 +34,7 @@
         <hudson.model.StringParameterDefinition>
           <name>IMAGE</name>
           <description></description>
-          <defaultValue>cnbj-repo.cloud.mi.com/nuwa/flask</defaultValue>
+          <defaultValue>nginx</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -49,13 +49,13 @@
         <hudson.model.StringParameterDefinition>
           <name>COMMAND</name>
           <description></description>
-          <defaultValue>[&apos;/bin/bash&apos;,&apos;-c&apos;]</defaultValue>
+          <defaultValue>[]</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>ARGUMENT</name>
           <description></description>
-          <defaultValue>[&apos;python3 /root/app.py&apos;]</defaultValue>
+          <defaultValue>[]</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -103,7 +103,7 @@
         <hudson.model.StringParameterDefinition>
           <name>SERVICE_NAME</name>
           <description></description>
-          <defaultValue>flask2</defaultValue>
+          <defaultValue>nginx1</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
