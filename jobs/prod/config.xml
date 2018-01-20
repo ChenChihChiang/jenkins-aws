@@ -100,6 +100,16 @@
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>HTTPSONLY</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>False</string>
+              <string>True</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>SERVICE_NAME</name>
           <description></description>
@@ -176,6 +186,7 @@ echo PROTOCOL=$PROTOCOL
 echo HOST_PORT=$HOST_PORT
 echo CONTAINER_PORT=$CONTAINER_PORT
 echo SERVICE=$SERVICE
+echo HTTPSONLY=$HTTPSONLY
 echo SERVICE_NAME=$SERVICE_NAME
 echo DOMAIN=$DOMAIN
 echo PATH=$PATH
@@ -183,7 +194,7 @@ echo PATH=$PATH
 #echo VALUE1=$VALUE1
 echo REPLICAS=$REPLICAS
 
-/usr/bin/python /root/mi/create_app.py $NAME $NAMESPACE $IMAGE $SECRET $COMMAND $ARGUMENT $MEMORY $PROTOCOL $HOST_PORT $CONTAINER_PORT $SERVICE $SERVICE_NAME $DOMAIN $PATH $REPLICAS
+/usr/bin/python /root/mi/create_app.py $NAME $NAMESPACE $IMAGE $SECRET $COMMAND $ARGUMENT $MEMORY $PROTOCOL $HOST_PORT $CONTAINER_PORT $SERVICE $HTTPSONLY $SERVICE_NAME $DOMAIN $PATH $REPLICAS
 </command>
     </hudson.tasks.Shell>
   </builders>
