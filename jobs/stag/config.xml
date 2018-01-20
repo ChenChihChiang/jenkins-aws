@@ -31,8 +31,8 @@
     <hudson.tasks.Shell>
       <command>echo &quot;stag&quot;
 
-/root/mi/login_mi.sh
-/root/mi/micloud app update -f /root/mi/app.json </command>
+./login_mi.sh
+./micloud app update -f /root/mi/app.json </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
