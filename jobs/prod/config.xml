@@ -49,13 +49,13 @@
         <hudson.model.StringParameterDefinition>
           <name>COMMAND</name>
           <description></description>
-          <defaultValue>[]</defaultValue>
+          <defaultValue></defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>ARGUMENT</name>
           <description></description>
-          <defaultValue>[]</defaultValue>
+          <defaultValue></defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -95,7 +95,7 @@
           <description></description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
-              <string>HTTP/HTTPS</string>
+              <string>HTTP_HTTPS</string>
               <string>TCP/UDP</string>
             </a>
           </choices>
