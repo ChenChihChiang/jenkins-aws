@@ -63,8 +63,9 @@
           <description></description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
+              <string>1024</string>
+              <string>2048</string>
               <string>4096</string>
-              <string>8192</string>
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
