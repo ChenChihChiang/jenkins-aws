@@ -49,13 +49,13 @@
         <hudson.model.StringParameterDefinition>
           <name>COMMAND</name>
           <description></description>
-          <defaultValue>[]</defaultValue>
+          <defaultValue> </defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>ARGUMENT</name>
           <description></description>
-          <defaultValue>[]</defaultValue>
+          <defaultValue> </defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
