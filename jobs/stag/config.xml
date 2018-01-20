@@ -35,7 +35,7 @@ chmod 755 login_mi.sh
 chmod 755 micloud
 
 ./login_mi.sh
-./micloud app update -f /root/mi/app.json </command>
+./micloud app update -f ./app.json </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
