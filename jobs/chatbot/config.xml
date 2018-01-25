@@ -30,7 +30,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>/root/.local/bin/aws s3 rm s3://nuwarobotics-gitea/chatbot/ --recursive
-/root/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/chatbot/</command>
+/root/.local/bin/aws s3 cp ./ s3://nuwarobotics-gitea/chatbot/ --recursive</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
