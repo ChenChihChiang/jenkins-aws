@@ -31,7 +31,7 @@
     <hudson.tasks.Shell>
       <command>rm -rf .git
 /root/.local/bin/aws s3 rm s3://nuwarobotics-gitea/chatbot/ --recursive
-/root/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/chatbot/ --delete --exclude &apos;.git&apos;</command>
+/root/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/chatbot/ --delete</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
