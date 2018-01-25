@@ -20,7 +20,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>dev</assignedNode>
+  <assignedNode>uat</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -29,11 +29,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>/root/.local/bin/aws s3 rm s3://nuwarobotics-gitea/chatbot/ --recursive
-
-tar czvf ../chatbot.tar.gz ./
-
-/root/.local/bin/aws s3 cp ../chatbot.tar.gz s3://nuwarobotics-gitea/</command>
+      <command>/var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/chatbot/ --delete</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
