@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
@@ -8,16 +9,13 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <authToken>nuwarobotics-chat</authToken>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <hudson.plugins.s3.S3CopyArtifact plugin="s3@0.10.12">
-      <projectName></projectName>
-      <filter></filter>
-      <excludeFilter></excludeFilter>
-      <target></target>
-      <selector class="hudson.plugins.copyartifact.StatusBuildSelector" plugin="copyartifact@1.39"/>
-    </hudson.plugins.s3.S3CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>echo &quot;hello&quot;</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers/>
   <buildWrappers/>
