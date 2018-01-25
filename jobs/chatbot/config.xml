@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
@@ -28,8 +29,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>aws s3 rm s3://nuwarobotics-gitea/ --recursive
-aws s3 cp ./ s3://nuwarobotics-gitea/ --recursive</command>
+      <command>/root/.local/bin/aws s3 rm s3://nuwarobotics-gitea/ --recursive
+/root/.local/bin/aws s3 cp ./ s3://nuwarobotics-gitea/ --recursive</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
