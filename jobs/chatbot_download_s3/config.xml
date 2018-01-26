@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.cn:nuwarobotics/1111.git</url>
+        <url>https://jenkins-china:nuWA88**@gitea.nuwarobotics.cn:3000/nuwarobotics/1111.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
