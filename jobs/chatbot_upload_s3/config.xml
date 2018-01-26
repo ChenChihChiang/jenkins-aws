@@ -29,7 +29,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>mkdir china
+      <command>#mkdir china
 cd china
 
 git clone --bare root@gitea.nuwarobotics.com:nuwarobotics/chatbot.git
