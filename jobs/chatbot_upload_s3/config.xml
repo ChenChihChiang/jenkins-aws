@@ -31,6 +31,7 @@
     <hudson.tasks.Shell>
       <command>#mkdir china
 cd china
+rm -rf *
 
 git clone --bare root@gitea.nuwarobotics.com:nuwarobotics/chatbot.git
 
