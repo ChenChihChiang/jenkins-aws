@@ -34,7 +34,7 @@
 cd china
 rm -rf *
 
-git clone --mirror root@gitea.nuwarobotics.com:nuwarobotics/chat.git
+#git clone --mirror root@gitea.nuwarobotics.com:nuwarobotics/chat.git
 
 cd $WORKSPACE
 /var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/chat/ --delete</command>
