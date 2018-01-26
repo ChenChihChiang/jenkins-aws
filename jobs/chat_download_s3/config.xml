@@ -22,7 +22,6 @@ version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 # build docker image
 
-mv Dockerfile.gpu Dockerfile
 sudo docker build . -t nuwarobotics/$name
 
 # tag docker-hub gpu, version
