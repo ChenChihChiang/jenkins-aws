@@ -38,7 +38,7 @@
       <configVersion>2</configVersion>
       <pushMerge>false</pushMerge>
       <pushOnlyIfSuccess>true</pushOnlyIfSuccess>
-      <forcePush>false</forcePush>
+      <forcePush>true</forcePush>
     </hudson.plugins.git.GitPublisher>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.61">
       <recipientList>$DEFAULT_RECIPIENTS, chihchinag@gmail.com</recipientList>
