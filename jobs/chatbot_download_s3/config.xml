@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.com:nuwarobotics/chatbot.git</url>
+        <url>root@gitea.nuwarobotics.cn:nuwarobotics/1111.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -20,7 +20,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>uat</assignedNode>
+  <assignedNode>china</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -29,9 +29,16 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>/var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/chatbot/ --delete</command>
+      <command>/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chatbot/ ./ --delete</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.plugins.git.GitPublisher plugin="git@3.7.0">
+      <configVersion>2</configVersion>
+      <pushMerge>false</pushMerge>
+      <pushOnlyIfSuccess>true</pushOnlyIfSuccess>
+      <forcePush>false</forcePush>
+    </hudson.plugins.git.GitPublisher>
+  </publishers>
   <buildWrappers/>
 </project>
