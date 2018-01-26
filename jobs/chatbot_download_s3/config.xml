@@ -9,6 +9,7 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>root@gitea.nuwarobotics.cn:nuwarobotics/1111.git</url>
+        <credentialsId>4274cf67-f539-48e1-ae09-fbffaa3b293f</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
