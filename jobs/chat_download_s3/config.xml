@@ -22,20 +22,20 @@ version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 # build docker image
 
-sudo docker build . -t nuwarobotics/$name
+docker build . -t nuwarobotics/$name
 
 # tag docker-hub gpu, version
-sudo docker tag nuwarobotics/$name:gpu nuwarobotics/$name:$version
+docker tag nuwarobotics/$name:gpu nuwarobotics/$name:$version
 
 # tag mi gpu, version
-sudo docker tag nuwarobotics/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name
-sudo docker tag nuwarobotics/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker tag nuwarobotics/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name
+docker tag nuwarobotics/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
 #push image to docker-hub, mi
 ###sudo docker push nuwarobotics/$name:$version
 ###sudo docker push nuwarobotics/$name:gpu
-sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name</command>
+docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker push cnbj-repo.cloud.mi.com/nuwa/$name</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
