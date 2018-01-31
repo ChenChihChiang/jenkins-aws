@@ -9,6 +9,7 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>root@gitea.nuwarobotics.com:nuwarobotics/chat-proxy.git</url>
+        <credentialsId>fa498763-152a-4334-a17c-839275076fb1</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
