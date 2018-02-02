@@ -45,7 +45,9 @@ docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
 ###sudo docker push nuwarobotics/$name:$version
 ###sudo docker push nuwarobotics/$name:gpu
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-#docker push cnbj-repo.cloud.mi.com/nuwa/$name</command>
+#docker push cnbj-repo.cloud.mi.com/nuwa/$name
+
+/bin/ssh root@10.161.0.5 &quot;cd /var/app/docker; docker-compose stop chat-proxy ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
