@@ -26,7 +26,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <authToken>chat-proxy</authToken>
+  <authToken>nuwarobotics</authToken>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
