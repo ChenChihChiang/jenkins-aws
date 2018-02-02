@@ -39,13 +39,13 @@ version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
-#docker tag cnbj-repo.cloud.mi.com/nuwa/$name cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name
 
 #push image to docker-hub, mi
 ###sudo docker push nuwarobotics/$name:$version
 ###sudo docker push nuwarobotics/$name:gpu
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-#docker push cnbj-repo.cloud.mi.com/nuwa/$name
+docker push cnbj-repo.cloud.mi.com/nuwa/$name
 
 /bin/ssh root@10.161.0.5 &quot;cd /var/app/docker; docker-compose stop chat-proxy ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
