@@ -54,7 +54,7 @@ docker push nuwarobotics/$name
 ##docker push cnbj-repo.cloud.mi.com/nuwa/$name
 
 
-/bin/ssh root@10.161.0.5 &quot;docker rmi nuwarobotics/chat-proxy-john:latest ; cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker-compose up -d&quot;</command>
+/bin/ssh root@10.161.0.5 &quot;docker rmi -f nuwarobotics/chat-proxy-john:latest ; cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
