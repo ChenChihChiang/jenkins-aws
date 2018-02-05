@@ -50,7 +50,7 @@ docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 docker push cnbj-repo.cloud.mi.com/nuwa/$name
 
 
-/bin/ssh root@10.161.0.5 &quot;docker rmi -f cnbj-repo.cloud.mi.com/nuwa/$name ; cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker-compose up -d&quot;</command>
+/bin/ssh root@10.161.0.5 &quot;cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker rmi -f cnbj-repo.cloud.mi.com/nuwa/$name ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
