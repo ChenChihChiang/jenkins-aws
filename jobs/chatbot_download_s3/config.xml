@@ -30,12 +30,12 @@ docker tag nuwarobotics/$name:gpu nuwarobotics/$name:$version
 
 # tag mi gpu, version
 docker tag nuwarobotics/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name:gpu
-docker tag nuwarobotics/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker tag nuwarobotics/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name:gpu-$version
 
 #push image to docker-hub, mi
 ###sudo docker push nuwarobotics/$name:$version
 ###sudo docker push nuwarobotics/$name:gpu
-docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu-$version
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu</command>
     </hudson.tasks.Shell>
   </builders>
