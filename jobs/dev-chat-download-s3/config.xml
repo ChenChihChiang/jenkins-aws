@@ -37,7 +37,7 @@ docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
   </builders>
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.61">
-      <recipientList>$DEFAULT_RECIPIENTS, chihchinag@gmail.com</recipientList>
+      <recipientList>$DEFAULT_RECIPIENTS, chihchinag@gmail.com, blues.lin@nuwarobotics.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.AbortedTrigger>
           <email>
