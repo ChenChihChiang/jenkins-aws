@@ -125,7 +125,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>machine-learning</name>
+      <name>chat-proxy</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
