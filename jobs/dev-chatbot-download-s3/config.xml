@@ -38,7 +38,7 @@ docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu
 
 
-/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chatbot ; docker-compose stop chatbot-worker ; docker images rmi -f cnbj-repo.cloud.mi.com/nuwa/dev-chatbot:gpu ; docker-compose up -d&quot;</command>
+/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chatbot ; docker-compose stop chatbot-worker ; docker rmi -f cnbj-repo.cloud.mi.com/nuwa/dev-chatbot:gpu ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
