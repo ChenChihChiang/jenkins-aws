@@ -132,6 +132,7 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>dev-chat-proxy</string>
+        <string>official-website</string>
       </jobNames>
       <jobFilters/>
       <columns>
