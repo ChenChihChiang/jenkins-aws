@@ -133,8 +133,8 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>chat_upload_s3</string>
         <string>chatbot_download_s3</string>
-        <string>chatbot_upload_s3</string>
         <string>dev-chat-download-s3</string>
+        <string>dev-chatbot-upload-s3</string>
       </jobNames>
       <jobFilters/>
       <columns>
