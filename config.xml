@@ -131,10 +131,10 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>chat_download_s3</string>
         <string>chat_upload_s3</string>
         <string>chatbot_download_s3</string>
         <string>chatbot_upload_s3</string>
+        <string>dev-chat-download-s3</string>
       </jobNames>
       <jobFilters/>
       <columns>

@@ -43,7 +43,7 @@ cd $WORKSPACE
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>chat_download_s3</childProjects>
+      <childProjects>dev-chat-download-s3</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
