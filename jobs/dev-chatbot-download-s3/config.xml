@@ -36,7 +36,9 @@ docker tag nuwarobotics/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name:$version
 ###sudo docker push nuwarobotics/$name:$version
 ###sudo docker push nuwarobotics/$name:gpu
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu</command>
+docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu
+
+ssh root@10.161.0.55:</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
