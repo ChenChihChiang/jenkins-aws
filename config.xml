@@ -132,6 +132,7 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>dev-chat-download-s3</string>
+        <string>dev-chat-proxy</string>
         <string>dev-chat-upload-s3</string>
         <string>dev-chatbot-download-s3</string>
         <string>dev-chatbot-upload-s3</string>
