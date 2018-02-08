@@ -32,7 +32,7 @@ docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
 # restart docker-compose
-/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chat ; docker-compose stop chat-worker ; docker-compose up -d&quot;</command>
+/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chat ; docker-compose stop chat-worker ; docker images rmi -f cnbj-repo.cloud.mi.com/nuwa/dev-chat:latest ;docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
