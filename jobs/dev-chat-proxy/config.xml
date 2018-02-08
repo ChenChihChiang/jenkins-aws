@@ -31,7 +31,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=chat-proxy
+      <command>name=dev-chat-proxy
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 
