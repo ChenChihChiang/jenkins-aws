@@ -30,13 +30,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#mkdir china
-cd china
-rm -rf *
-
-#git clone --mirror root@gitea.nuwarobotics.com:nuwarobotics/chatbot.git
-
-cd $WORKSPACE
+      <command>cd $WORKSPACE
 /var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/chatbot/ --delete</command>
     </hudson.tasks.Shell>
   </builders>
