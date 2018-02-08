@@ -30,7 +30,9 @@ docker tag cnbj-repo.cloud.mi.com/nuwa/$name cnbj-repo.cloud.mi.com/nuwa/$name:$
 ###sudo docker push nuwarobotics/$name:$version
 ###sudo docker push nuwarobotics/$name:gpu
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-docker push cnbj-repo.cloud.mi.com/nuwa/$name</command>
+docker push cnbj-repo.cloud.mi.com/nuwa/$name
+
+/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chat ; docker-compose stop chat-worker ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
