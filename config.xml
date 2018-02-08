@@ -194,7 +194,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>web</name>
+      <name>official-website</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
