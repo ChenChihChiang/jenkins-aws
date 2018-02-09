@@ -16,7 +16,7 @@
     <hudson.tasks.Shell>
       <command>/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chatbot/ ./ --delete
 
-name=dev-chatbot
+name=chatbot
 version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu
 
 
