@@ -178,6 +178,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
         <string>dev-chatbot-download-s3</string>
         <string>dev-chatbot-upload-s3</string>
+        <string>uat-chatbot-download-s3</string>
       </jobNames>
       <jobFilters/>
       <columns>
