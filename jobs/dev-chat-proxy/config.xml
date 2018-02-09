@@ -31,26 +31,19 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=dev-chat-proxy
+      <command>name=chat-proxy
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 
 # build docker image
-
 docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:latest
 
 #push image to docker-hub, mi
-###sudo docker push nuwarobotics/$name:$version
-###sudo docker push nuwarobotics/$name:gpu
-
-
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
 
 
-/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker-compose up -d&quot;</command>
+#/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
