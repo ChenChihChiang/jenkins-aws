@@ -25,10 +25,6 @@ mv Dockerfile.gpu Dockerfile
 docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
 
-# tag mi gpu, version
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version 
-
-
 #push image to docker-hub, mi
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
