@@ -16,26 +16,16 @@
     <hudson.tasks.Shell>
       <command>/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chatbot/ ./ --delete
 
-name=dev-chatbot
-version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu
+name=chatbot
+version=`date +&quot;%Y%m%d_%H%M&quot;`-cpu
 
 
 # build docker image
+docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
-mv Dockerfile.gpu Dockerfile
-docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:gpu
-
-# tag docker-hub gpu, version
-# docker tag nuwarobotics/$name:gpu nuwarobotics/$name:$version
-
-# tag mi gpu, version
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:gpu cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
 #push image to docker-hub, mi
-###sudo docker push nuwarobotics/$name:$version
-###sudo docker push nuwarobotics/$name:gpu
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu
 
 
 #/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chatbot ; docker-compose stop chatbot-worker ; docker rmi -f cnbj-repo.cloud.mi.com/nuwa/dev-chatbot:gpu ; docker-compose up -d&quot;</command>
