@@ -176,9 +176,9 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
+        <string>chatbot-download-s3-cpu</string>
         <string>chatbot-download-s3-gpu</string>
         <string>dev-chatbot-upload-s3</string>
-        <string>uat-chatbot-download-s3</string>
       </jobNames>
       <jobFilters/>
       <columns>
