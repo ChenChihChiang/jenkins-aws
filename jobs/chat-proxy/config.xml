@@ -40,7 +40,7 @@ docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
 
 # tag image
-docker tag push cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:111
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:111
 
 #push image to docker-hub, mi
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
