@@ -14,7 +14,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/master</name>
+        <name>*/1721</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -46,6 +46,7 @@ docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuw
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:111
 
+docker pull push cnbj-repo.cloud.mi.com/nuwa/$name:111
 
 /bin/ssh root@10.161.0.56 &quot;cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
