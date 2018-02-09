@@ -131,7 +131,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>dev-chat-proxy</string>
+        <string>chat-proxy</string>
       </jobNames>
       <jobFilters/>
       <columns>
