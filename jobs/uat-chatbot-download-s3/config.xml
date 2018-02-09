@@ -38,12 +38,12 @@ docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:gpu
 
 
-/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chatbot ; docker-compose stop chatbot-worker ; docker rmi -f cnbj-repo.cloud.mi.com/nuwa/dev-chatbot:gpu ; docker-compose up -d&quot;</command>
+#/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chatbot ; docker-compose stop chatbot-worker ; docker rmi -f cnbj-repo.cloud.mi.com/nuwa/dev-chatbot:gpu ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.61">
-      <recipientList>$DEFAULT_RECIPIENTS,chihchinag@gmail.com,blues.lin@nuwarobotics.com</recipientList>
+      <recipientList>$DEFAULT_RECIPIENTS,chihchinag@gmail.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.AbortedTrigger>
           <email>
