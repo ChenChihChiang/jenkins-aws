@@ -40,13 +40,13 @@ docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
 
 # tag image
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:111
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:222
 
 #push image to docker-hub, mi
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-docker push cnbj-repo.cloud.mi.com/nuwa/$name:111
+docker push cnbj-repo.cloud.mi.com/nuwa/$name:222
 
-docker rmi -f cnbj-repo.cloud.mi.com/nuwa/$name:111
+docker rmi -f cnbj-repo.cloud.mi.com/nuwa/$name:222
 
 sleep 10
 
