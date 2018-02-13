@@ -36,7 +36,10 @@
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <jenkins.security.LastGrantedAuthoritiesProperty>
-      <timestamp>0</timestamp>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1518513519280</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>
