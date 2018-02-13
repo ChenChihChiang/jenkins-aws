@@ -30,7 +30,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>~/.nvm/nvm.sh use 8.9.4
+      <command>. ~/.nvm/nvm.sh
+nvm use 8.9.4
 
 npm run docker-build
 npm run docker-push</command>
