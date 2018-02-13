@@ -20,7 +20,7 @@ name=chatbot
 version=`date +&quot;%Y%m%d_%H%M&quot;`-cpu
 
 mv Dockerfile-cpu Dockerfile
-mv requirement-cpu.txt requirement.txt
+mv requirements-cpu.txt requirements.txt
 
 # build docker image
 docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
