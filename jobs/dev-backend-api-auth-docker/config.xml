@@ -33,6 +33,7 @@
       <command>. ~/.nvm/nvm.sh
 nvm use 8.9.4
 
+npm install
 npm run docker-build
 npm run docker-push</command>
     </hudson.tasks.Shell>
