@@ -14,11 +14,12 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chatbot/ ./ --delete
+      <command>/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chatbot/ ./ --delete
 
 name=chatbot
 version=`date +&quot;%Y%m%d_%H%M&quot;`-cpu
 
+mv requirement-cpu.txt requirement.txt
 
 # build docker image
 docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
