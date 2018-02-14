@@ -33,6 +33,7 @@
       <command>. ~/.bashrc
 nvm use 8.0.0
 
+rm -rf ./node_modules
 npm install
 npm run docker-build
 npm run docker-push</command>
