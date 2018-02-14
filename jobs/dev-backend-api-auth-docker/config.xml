@@ -31,7 +31,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>. ~/.bashrc
-nvm use 8.9.4
+nvm use 8.0.0
 
 npm install
 npm run docker-build
