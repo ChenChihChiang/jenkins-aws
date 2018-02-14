@@ -30,7 +30,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>. ~/.nvm/nvm.sh
+      <command>. ~/.bashrc
 nvm use 8.9.4
 
 npm install
