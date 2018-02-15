@@ -32,8 +32,8 @@
   <builders>
     <hudson.tasks.Shell>
       <command>name=chat-proxy
-version=`date +&quot;%Y%m%d_%H%M&quot;`
-
+#version=`date +&quot;%Y%m%d_%H%M&quot;`
+version=v2
 
 # build docker image
 docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
