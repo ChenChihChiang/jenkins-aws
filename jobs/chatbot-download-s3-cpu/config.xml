@@ -18,15 +18,18 @@
 
 name=chatbot
 version=`date +&quot;%Y%m%d_%H%M&quot;`-cpu
+version=v2-cpu
 
 mv Dockerfile-cpu Dockerfile
 mv requirements-cpu.txt requirements.txt
 
 # build docker image
 docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$version
 
 
 #push image to docker-hub, mi
+docker push nuwarobotics/$name:$version
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
 
