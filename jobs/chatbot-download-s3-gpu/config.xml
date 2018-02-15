@@ -18,7 +18,7 @@
 
 name=chatbot
 #version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu
-version=v2
+version=v2-gpu
 
 mv Dockerfile-gpu Dockerfile
 mv requirements-gpu.txt requirements.txt
