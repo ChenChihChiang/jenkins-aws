@@ -17,16 +17,16 @@
       <command>/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chat/ ./ --delete
 
 name=chat
-version=`date +&quot;%Y%m%d_%H%M&quot;`
-
+#version=`date +&quot;%Y%m%d_%H%M&quot;`
+version=v2
 
 # build docker image
 
-docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:latest
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:latest cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$version
 
 #push image to docker-hub, mi
-###sudo docker push nuwarobotics/$name:$version
+docker push nuwarobotics/$name:$version
 ###sudo docker push nuwarobotics/$name:gpu
 #docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
