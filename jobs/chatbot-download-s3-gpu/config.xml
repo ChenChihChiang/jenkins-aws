@@ -17,8 +17,8 @@
       <command>/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chatbot/ ./ --delete
 
 name=chatbot
-#version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu
-version=v2-gpu
+version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu
+#version=v2-gpu
 
 mv Dockerfile-gpu Dockerfile
 mv requirements-gpu.txt requirements.txt
