@@ -37,14 +37,14 @@ version=v2
 
 # build docker image
 docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
-
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$version
 
 # tag image
 docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:222
 
 #push image to docker-hub, mi
+docker push nuwarobotics/$name:$version
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-#docker push cnbj-repo.cloud.mi.com/nuwa/$name:222
 
 
 #/bin/ssh root@10.161.0.56 &quot;docker rmi -f cnbj-repo.cloud.mi.com/nuwa/$name:222 ; docker pull cnbj-repo.cloud.mi.com/nuwa/$name:222 ;cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker-compose up -d&quot;</command>
