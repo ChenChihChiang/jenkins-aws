@@ -18,7 +18,7 @@
 
 name=chatbot
 version=`date +&quot;%Y%m%d_%H%M&quot;`-cpu
-version=v2-cpu
+#version=v2-cpu
 
 mv Dockerfile-cpu Dockerfile
 mv requirements-cpu.txt requirements.txt
