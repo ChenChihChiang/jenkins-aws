@@ -36,7 +36,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>. .nvm/nvm.sh
+      <command>. /var/lib/jenkins/.nvm/nvm.sh
 nvm use 8.0.0
 
 rm -rf ./node_modules
