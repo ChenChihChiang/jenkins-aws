@@ -37,10 +37,10 @@
   <builders>
     <hudson.tasks.Shell>
       <command>. /var/lib/jenkins/.nvm/nvm.sh
-nvm use 8.0.0
+sudo nvm use 8.0.0
 
 rm -rf ./node_modules
-npm install
+sudo npm install
 sudo npm run docker-build
 sudo npm run docker-push</command>
     </hudson.tasks.Shell>
