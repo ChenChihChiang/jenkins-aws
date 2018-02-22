@@ -175,7 +175,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#echo STATE=$STATE
+      <command>##echo STATE=$STATE
 echo NAME=$NAME
 echo NAMESPACE=$NAMESPACE
 echo IMAGE=$IMAGE
