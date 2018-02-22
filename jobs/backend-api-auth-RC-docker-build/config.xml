@@ -40,9 +40,9 @@
 nvm use 8.0.0
 rm -rf ./node_modules
 npm install
-
-sudo npm run docker-build
-sudo npm run docker-push</command>
+npm run build
+sudo gulp docker-build
+sudo gulp docker-push</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
