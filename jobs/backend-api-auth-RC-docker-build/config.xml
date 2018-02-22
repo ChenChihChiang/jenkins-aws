@@ -36,8 +36,11 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>sudo rm -rf ./node_modules
-sudo npm install
+      <command>. ~/.bashrc
+nvm use 8.0.0
+rm -rf ./node_modules
+npm install
+
 sudo npm run docker-build
 sudo npm run docker-push</command>
     </hudson.tasks.Shell>
