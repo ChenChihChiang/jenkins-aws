@@ -37,7 +37,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>. /var/lib/jenkins/.nvm/nvm.sh
-sudo nvm use 8.0.0
+nvm use 8.0.0
 
 rm -rf ./node_modules
 sudo npm install
