@@ -156,7 +156,7 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>chat-download-s3</string>
-        <string>chat-upload-s3</string>
+        <string>intent-upload-s3</string>
       </jobNames>
       <jobFilters/>
       <columns>
