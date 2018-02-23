@@ -155,7 +155,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>chat-download-s3</string>
+        <string>intent-download-s3</string>
         <string>intent-upload-s3</string>
       </jobNames>
       <jobFilters/>
