@@ -32,7 +32,8 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd $WORKSPACE
-/var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/chatbot/ --delete</command>
+#/var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/chatbot/ --delete
+/var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea-xingxia/chatbot/ --delete</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
