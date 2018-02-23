@@ -132,6 +132,7 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>chat-proxy</string>
+        <string>chat-proxy-download</string>
         <string>chat-proxy-upload</string>
       </jobNames>
       <jobFilters/>
