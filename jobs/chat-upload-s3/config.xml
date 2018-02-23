@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.com:nuwarobotics/chat.git</url>
+        <url>root@gitea.nuwarobotics.com:nuwarobotics/intent.git</url>
         <credentialsId>2b20856e-d4ed-4f8e-8602-e3db593e4c7a</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -26,19 +26,19 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <authToken>chat</authToken>
+  <authToken>intent</authToken>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd $WORKSPACE
 rm -rf ./.git
-/var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/chat/ --delete</command>
+/var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/intent/ --delete</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>chat-download-s3</childProjects>
+      <childProjects>intent-download-s3</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
