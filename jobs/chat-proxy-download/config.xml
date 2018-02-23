@@ -31,7 +31,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=chat-proxy
+      <command>/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chat-proxy/ ./ --delete
+
+name=chat-proxy
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 #version=v2
 
