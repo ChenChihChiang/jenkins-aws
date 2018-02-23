@@ -5,7 +5,7 @@
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.scm.NullSCM"/>
-  <assignedNode>china</assignedNode>
+  <assignedNode>uat</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -14,7 +14,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chat/ ./ --delete
+      <command>#/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chat/ ./ --delete
 
 name=chat
 version=`date +&quot;%Y%m%d_%H%M&quot;`
