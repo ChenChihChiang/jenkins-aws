@@ -14,8 +14,12 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/intent/ ./ --delete
+      <command>##rm -rf ./intent*
+
+#/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/intent/ ./ --delete
 /root/.local/bin/aws s3 sync s3://nuwarobotics-gitea-ningxia/intent/ ./ --delete
+
+##tar zxvf intent.tar.gz
 
 name=intent
 version=`date +&quot;%Y%m%d_%H%M&quot;`
