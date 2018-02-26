@@ -32,6 +32,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd $WORKSPACE
+rm -rf .git
 /var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea/intent/ --delete
 #/var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea-ningxia/intent/ --delete</command>
     </hudson.tasks.Shell>
