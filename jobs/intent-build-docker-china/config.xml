@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@giteassh.nuwarobotics.cn:nuwarobotics/intent.git</url>
+        <url>https://jenkins:nuWA88**@gitea.nuwarobotics.cn/nuwarobotics/intent-mirror.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
