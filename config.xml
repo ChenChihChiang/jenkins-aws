@@ -156,6 +156,7 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>intent-build-docker</string>
+        <string>intent-build-docker-china</string>
         <string>intent-download-s3</string>
         <string>intent-upload-s3</string>
       </jobNames>
