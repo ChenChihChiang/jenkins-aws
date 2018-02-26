@@ -33,10 +33,11 @@
     <hudson.tasks.Shell>
       <command>cd $WORKSPACE
 rm -rf .git
-tar cvzf ../intent.tar.gz ./
+#tar cvzf ../intent.tar.gz ./
 /var/lib/jenkins/.local/bin/aws s3 rm s3://nuwarobotics-gitea/intent/intent.tar.gz
-/var/lib/jenkins/.local/bin/aws s3 cp ../intent.tar.gz s3://nuwarobotics-gitea/intent/
-#/var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea-ningxia/intent/ --delete</command>
+
+#/var/lib/jenkins/.local/bin/aws s3 cp ../intent.tar.gz s3://nuwarobotics-gitea/intent/
+/var/lib/jenkins/.local/bin/aws s3 sync ./ s3://nuwarobotics-gitea-ningxia/intent/ --delete</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
