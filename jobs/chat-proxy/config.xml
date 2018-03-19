@@ -43,7 +43,7 @@ docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$versio
 docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:222
 
 #push image to docker-hub, mi
-docker push nuwarobotics/$name:$version
+##docker push nuwarobotics/$name:$version
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 
 
