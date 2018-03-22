@@ -183,9 +183,9 @@
         <string>chatbot-download-s3-cpu</string>
         <string>chatbot-download-s3-cpu-uat</string>
         <string>chatbot-download-s3-gpu</string>
-        <string>chatbot-download-s3-gpu-uat</string>
         <string>chatbot-upload-s3</string>
         <string>chatbot-upload-s3-uat</string>
+        <string>uat-chatbot-download-s3-gpu</string>
       </jobNames>
       <jobFilters/>
       <columns>
