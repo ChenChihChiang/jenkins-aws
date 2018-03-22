@@ -233,6 +233,10 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>china-chatbot-download-s3-cpu</string>
+        <string>china-chatbot-download-s3-gpu</string>
+        <string>china-uat-chatbot-download-s3-cpu</string>
+        <string>china-uat-chatbot-download-s3-gpu</string>
       </jobNames>
       <jobFilters/>
       <columns>
