@@ -184,9 +184,9 @@
         <string>chatbot-download-s3-gpu</string>
         <string>chatbot-download-s3-gpu-china-china</string>
         <string>chatbot-upload-s3</string>
+        <string>china-uat-chatbot-download-s3-gpu</string>
         <string>uat-chatbot-download-s3-cpu</string>
         <string>uat-chatbot-download-s3-gpu</string>
-        <string>uat-chatbot-download-s3-gpu-china</string>
         <string>uat-chatbot-upload-s3</string>
       </jobNames>
       <jobFilters/>
