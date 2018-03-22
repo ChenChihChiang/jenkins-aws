@@ -4,7 +4,22 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
-  <scm class="hudson.scm.NullSCM"/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>git@giteassh.nuwarobotics.cn:nuwarobotics/chatbot-mirror.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
   <assignedNode>china2</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
@@ -14,8 +29,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>/root/.local/bin/aws s3 sync s3://nuwarobotics/chatbot-uat/ ./ --delete
-
+      <command>
 name=chatbot
 version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu-uat
 #version=v2-gpu
