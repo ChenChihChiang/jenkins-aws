@@ -5,7 +5,7 @@
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.scm.NullSCM"/>
-  <assignedNode>china2</assignedNode>
+  <assignedNode>prod</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -14,10 +14,10 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chatbot/ ./ --delete
+      <command>/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chatbot-uat/ ./ --delete
 
 name=chatbot
-version=`date +&quot;%Y%m%d_%H%M&quot;`-cpu
+version=`date +&quot;%Y%m%d_%H%M&quot;`-cpu-uat
 #version=v2-cpu
 
 mv Dockerfile-cpu Dockerfile
