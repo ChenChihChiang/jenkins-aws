@@ -183,6 +183,7 @@
         <string>chatbot-download-s3-cpu</string>
         <string>chatbot-download-s3-gpu</string>
         <string>chatbot-upload-s3</string>
+        <string>china-chatbot-download-s3-cpu</string>
         <string>china-chatbot-download-s3-gpu</string>
         <string>china-uat-chatbot-download-s3-cpu</string>
         <string>china-uat-chatbot-download-s3-gpu</string>
