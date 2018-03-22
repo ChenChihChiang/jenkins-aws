@@ -8,8 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.com:nuwarobotics/intent.git</url>
-        <credentialsId>2b20856e-d4ed-4f8e-8602-e3db593e4c7a</credentialsId>
+        <url>git@giteassh.nuwarobotics.cn:nuwarobotics/intent-mirror.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -21,7 +20,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>china</assignedNode>
+  <assignedNode>china2</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
