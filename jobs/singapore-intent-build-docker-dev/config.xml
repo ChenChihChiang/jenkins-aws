@@ -32,7 +32,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command># set name:version
-name=intent
+name=intent-dev
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 # build image
