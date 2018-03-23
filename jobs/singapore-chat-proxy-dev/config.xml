@@ -26,13 +26,13 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <authToken>singapore-chat-proxy-dev</authToken>
+  <authToken>singapore-chatproxy-dev</authToken>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command># set name:version
-name=chat-proxy
+name=chatproxy-dev
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 # build image
