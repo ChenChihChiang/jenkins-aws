@@ -379,7 +379,7 @@ docker push us-repo.cloud.mi.com/nuwa/$name:latest
       <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
       <attachBuildLog>true</attachBuildLog>
       <compressBuildLog>false</compressBuildLog>
-      <replyTo>$DEFAULT_REPLYTO,chihchinag@gmail.com</replyTo>
+      <replyTo>$DEFAULT_REPLYTO,mi@nuwarobotics.com</replyTo>
       <saveOutput>false</saveOutput>
       <disabled>false</disabled>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
