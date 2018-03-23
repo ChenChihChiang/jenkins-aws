@@ -21,30 +21,27 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>uat</assignedNode>
+  <assignedNode>sg1</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <authToken>intent-build-docker</authToken>
+  <authToken>singapore-intent-build-docker-dev</authToken>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=intent
+      <command># set name:version
+name=intent
 version=`date +&quot;%Y%m%d_%H%M&quot;`
-#version=v2
 
-# build docker image
+# build image
+sudo docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
+sudo docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
 
-sudo docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
-sudo docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$version
-
-#push image to docker-hub, mi
-sudo docker push nuwarobotics/$name:$version
-###sudo docker push nuwarobotics/$name:gpu
-#docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
-#docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+# push image
+docker push us-repo.cloud.mi.com/nuwa/$name:$version
+docker push us-repo.cloud.mi.com/nuwa/$name:$version
 </command>
     </hudson.tasks.Shell>
   </builders>
