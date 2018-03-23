@@ -260,6 +260,8 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[9]/jobNames/comparator"/>
+        <string>singapore-chatbot-gpu-dev</string>
+        <string>singapore-intent-build-docker-dev</string>
       </jobNames>
       <jobFilters/>
       <columns>
