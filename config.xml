@@ -262,6 +262,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[9]/jobNames/comparator"/>
         <string>singapore-chat-proxy-dev</string>
         <string>singapore-chatbot-gpu-dev</string>
+        <string>singapore-chatbotroom-dev</string>
         <string>singapore-intent-build-docker-dev</string>
       </jobNames>
       <jobFilters/>
