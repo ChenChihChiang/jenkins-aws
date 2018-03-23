@@ -49,7 +49,7 @@ docker push us-repo.cloud.mi.com/nuwa/$name:latest
   </builders>
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.61">
-      <recipientList>mi@nuwarobotics.com</recipientList>
+      <recipientList>$DEFAULT_RECIPIENTS,ml@nuwarobotics.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.AbortedTrigger>
           <email>
@@ -376,7 +376,7 @@ docker push us-repo.cloud.mi.com/nuwa/$name:latest
       <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
       <attachBuildLog>true</attachBuildLog>
       <compressBuildLog>false</compressBuildLog>
-      <replyTo>$DEFAULT_REPLYTO</replyTo>
+      <replyTo>$DEFAULT_RECIPIENTS,ml@nuwarobotics.com</replyTo>
       <saveOutput>false</saveOutput>
       <disabled>false</disabled>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
