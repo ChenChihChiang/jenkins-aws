@@ -26,6 +26,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <authToken>singapore-chatbot-gpu-dev</authToken>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
