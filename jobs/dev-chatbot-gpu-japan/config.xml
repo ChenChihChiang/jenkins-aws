@@ -8,19 +8,20 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git@giteassh.nuwarobotics.cn:nuwarobotics/chatbot-mirror.git</url>
+        <url>git@giteassh.nuwarobotics.com:nuwarobotics/chatbot.git</url>
+        <credentialsId>2b20856e-d4ed-4f8e-8602-e3db593e4c7a</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/master</name>
+        <name>*/dev</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>china2</assignedNode>
+  <assignedNode>uat</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -29,23 +30,19 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#/root/.local/bin/aws s3 sync s3://nuwarobotics-gitea/chatbot/ ./ --delete
-
-name=chatbot
+      <command>name=chatbot
 version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu
-#version=v2-gpu
 
 mv Dockerfile-gpu Dockerfile
 mv requirements-gpu.txt requirements.txt
 
 # build docker image
-docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$version
+docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
+docker tag us-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$version
 
 
 #push image to docker-hub, mi
-#docker push nuwarobotics/$name:$version
-docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker push us-repo.cloud.mi.com/nuwa/$name:$version
 
 
 #/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chatbot ; docker-compose stop chatbot-worker ; docker rmi -f cnbj-repo.cloud.mi.com/nuwa/dev-chatbot:gpu ; docker-compose up -d&quot;</command>
