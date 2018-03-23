@@ -159,6 +159,7 @@
         <string>intent-build-docker-japan</string>
         <string>intent-download-s3</string>
         <string>intent-upload-s3</string>
+        <string>singapore-intent-build-docker-dev</string>
       </jobNames>
       <jobFilters/>
       <columns>
