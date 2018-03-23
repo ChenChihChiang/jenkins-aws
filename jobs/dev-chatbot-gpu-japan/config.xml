@@ -21,7 +21,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>uat</assignedNode>
+  <assignedNode>sg1</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -30,22 +30,23 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=chatbot
-version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu
+      <command># set image name:version
+name=chatbot
+version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu-dev
 
 mv Dockerfile-gpu Dockerfile
 mv requirements-gpu.txt requirements.txt
 
-# build docker image
+# build image
 docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
-docker tag us-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$version
+docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
 
 
-#push image to docker-hub, mi
+# push image
 docker push us-repo.cloud.mi.com/nuwa/$name:$version
+docker push us-repo.cloud.mi.com/nuwa/$name:latest
 
-
-#/bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chatbot ; docker-compose stop chatbot-worker ; docker rmi -f cnbj-repo.cloud.mi.com/nuwa/dev-chatbot:gpu ; docker-compose up -d&quot;</command>
+# /bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chatbot ; docker-compose stop chatbot-worker ; docker rmi -f cnbj-repo.cloud.mi.com/nuwa/dev-chatbot:gpu ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
