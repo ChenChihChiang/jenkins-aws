@@ -47,7 +47,7 @@ docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$n
 docker push us-repo.cloud.mi.com/nuwa/$name:$version
 docker push us-repo.cloud.mi.com/nuwa/$name:latest
 
-# /bin/ssh root@10.161.0.55 &quot;cd /var/app/docker ; docker-compose stop chatbot ; docker-compose stop chatbot-worker ; docker rmi -f cnbj-repo.cloud.mi.com/nuwa/dev-chatbot:gpu ; docker-compose up -d&quot;</command>
+/bin/ssh root@54.178.165.29 &quot;cd /var/app/docker ; docker-compose pull ; docker-compose stop ; docker rm -f -v; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
