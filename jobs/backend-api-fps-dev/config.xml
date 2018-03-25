@@ -1,16 +1,50 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
-  <scm class="hudson.scm.NullSCM"/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>root@gitea.nuwarobotics.com:nuwarobotics/backend-api-fps.git</url>
+        <credentialsId>2b20856e-d4ed-4f8e-8602-e3db593e4c7a</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
-  <builders/>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># set name:version
+name=backend-api-fps-dev
+version=`date +&quot;%Y%m%d_%H%M&quot;`
+
+# build image
+docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
+#3#docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
+
+
+# push image 
+docker push us-repo.cloud.mi.com/nuwa/$name:$version
+#3#docker push us-repo.cloud.mi.com/nuwa/$name:latest
+
+#/bin/ssh root@54.178.165.29 &quot;cd /var/app/docker ; docker-compose pull ; docker-compose stop ; docker-compose rm -f -v; docker-compose up -d&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
   <publishers/>
   <buildWrappers/>
 </project>
