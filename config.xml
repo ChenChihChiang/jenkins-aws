@@ -250,7 +250,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>dev-singapore</name>
+      <name>singapore-dev</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
