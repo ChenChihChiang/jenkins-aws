@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git@giteassh.nuwarobotics.cn:nuwarobotics/backend-api-fps-mirror.git</url>
+        <url>git@giteassh.nuwarobotics.cn:nuwarobotics/backend-api-airtable-sync-mirror.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -30,7 +30,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command># set name:version
-name=backend-api-fps-dev
+name=backend-api-airtable-sync-dev
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 # build image
