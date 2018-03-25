@@ -281,7 +281,6 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[9]/jobNames/comparator"/>
-        <string>backend-api-airtable-sync-dev</string>
         <string>backend-api-fps-dev</string>
       </jobNames>
       <jobFilters/>
