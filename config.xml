@@ -347,6 +347,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[13]/jobNames/comparator"/>
+        <string>backend-api-mibo-dev</string>
       </jobNames>
       <jobFilters/>
       <columns>
