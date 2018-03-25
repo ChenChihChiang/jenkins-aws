@@ -190,7 +190,6 @@
         <string>china-uat-chatbot-download-s3-gpu</string>
         <string>uat-chatbot-download-s3-cpu</string>
         <string>uat-chatbot-download-s3-gpu</string>
-        <string>uat-chatbot-upload-s3</string>
       </jobNames>
       <jobFilters/>
       <columns>
