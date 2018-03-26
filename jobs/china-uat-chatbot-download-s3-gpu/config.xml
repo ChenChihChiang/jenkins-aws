@@ -29,8 +29,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>
-name=chatbot
+      <command>name=chatbot
 version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu-uat
 #version=v2-gpu
 
