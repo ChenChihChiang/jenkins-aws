@@ -362,7 +362,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[13]/jobNames/comparator"/>
-        <string>backend-notification-service</string>
+        <string>backend-notification-service-stag</string>
       </jobNames>
       <jobFilters/>
       <columns>
