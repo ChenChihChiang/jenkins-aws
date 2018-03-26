@@ -181,7 +181,6 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
-        <string>china-chatbot-download-s3-cpu</string>
         <string>china-uat-chatbot-cpu</string>
         <string>china-uat-chatbot-download-s3-gpu</string>
       </jobNames>
@@ -226,7 +225,6 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>china-chatbot-download-s3-cpu</string>
         <string>china-uat-chatbot-cpu</string>
         <string>china-uat-chatbot-download-s3-gpu</string>
         <string>singapore-chatbot-gpu-dev</string>
