@@ -32,8 +32,8 @@
   <builders>
     <hudson.tasks.Shell>
       <command># set image name:version
-name=chatbot-dev
-version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu-dev
+name=chatbot-dev-gpu
+version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 mv Dockerfile-gpu Dockerfile
 mv requirements-gpu.txt requirements.txt
