@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git@giteassh.nuwarobotics.cn:nuwarobotics/chatbot-mirror.git</url>
+        <url>git@giteassh.nuwarobotics.cn:nuwarobotics/backend-notification-service-mirror.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
