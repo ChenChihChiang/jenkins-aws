@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
@@ -26,7 +27,24 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
-  <builders/>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># set name:version
+name=frontend-oauth-admin-stag
+version=`date +&quot;%Y%m%d_%H%M&quot;`
+
+# build image
+docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
+#3#docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
+
+
+# push image 
+docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+#3#docker push us-repo.cloud.mi.com/nuwa/$name:latest
+
+#/bin/ssh root@54.178.165.29 &quot;cd /var/app/docker ; docker-compose pull ; docker-compose stop ; docker-compose rm -f -v; docker-compose up -d&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
   <publishers/>
   <buildWrappers/>
 </project>
