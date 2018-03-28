@@ -318,7 +318,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>frontend-ota-admin-dev</string>
+        <string>frontend-ota-admin-stag</string>
       </jobNames>
       <jobFilters/>
       <columns>
