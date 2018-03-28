@@ -30,7 +30,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command># set name:version
-name=backend-api-airtable-sync-dev
+name=backend-api-airtable-sync-stag
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 # build image
