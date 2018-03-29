@@ -13,34 +13,31 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/master</name>
+        <name>*/uat</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>prod</assignedNode>
+  <assignedNode>stag</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <authToken>intent-build-docker</authToken>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=intent
+      <command>name=intent-uat
 version=`date +&quot;%Y%m%d_%H%M&quot;`
-#version=v2
 
 # build docker image
-
 docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
 docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$version
 
 #push image to docker-hub, mi
-sudo docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 ###sudo docker push nuwarobotics/$name:$version
 ###sudo docker push nuwarobotics/$name:gpu
 #docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
