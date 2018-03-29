@@ -153,7 +153,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>china-intent-build-docker-uat</string>
+        <string>china-intent-uat</string>
         <string>intent-build-docker-japan</string>
         <string>singapore-intent-dev</string>
       </jobNames>
