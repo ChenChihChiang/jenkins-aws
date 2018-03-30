@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
@@ -34,18 +35,18 @@ cd $WORKSPACE/flask
 name=ml-flask-dev
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 # build image
-docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
+docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version -f Dockerfile_flask
 #3#docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
 # push image 
 docker push us-repo.cloud.mi.com/nuwa/$name:$version
 #3#docker push us-repo.cloud.mi.com/nuwa/$name:latest
 
 
-cd $WORKSPACE/module
-name=ml-module-dev
+cd $WORKSPACE/models
+name=ml-models-dev
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 # build image
-docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
+docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version -f Dockerfile_models
 #3#docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
 # push image 
 docker push us-repo.cloud.mi.com/nuwa/$name:$version
