@@ -46,7 +46,7 @@ cd $WORKSPACE/models
 name=ml-models-dev
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 # build image
-docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version -f Dockerfile_models
+docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version -f Dockerfile_model
 #3#docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
 # push image 
 docker push us-repo.cloud.mi.com/nuwa/$name:$version
