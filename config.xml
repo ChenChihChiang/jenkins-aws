@@ -201,10 +201,10 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[7]/jobNames/comparator"/>
-        <string>singapore-chatbotroom-dev</string>
         <string>singapore-chatproxy-dev</string>
         <string>singapore-intent-dev</string>
         <string>tokyo-chatbot-gpu-dev</string>
+        <string>tokyo-chatbotroom-dev</string>
       </jobNames>
       <jobFilters/>
       <columns>
