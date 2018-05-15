@@ -112,6 +112,7 @@
         <string>china-intent-uat</string>
         <string>intent-build-docker-japan</string>
         <string>tokyo-intent-dev</string>
+        <string>usa-intent-uat</string>
       </jobNames>
       <jobFilters/>
       <columns>
