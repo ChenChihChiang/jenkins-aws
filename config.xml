@@ -136,6 +136,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[4]/jobNames/comparator"/>
         <string>china-uat-chatbot-cpu</string>
         <string>china-uat-chatbot-gpu</string>
+        <string>virginia-dev-chatbot-gpu</string>
       </jobNames>
       <jobFilters/>
       <columns>
