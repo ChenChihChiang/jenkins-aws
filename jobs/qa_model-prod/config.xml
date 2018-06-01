@@ -52,6 +52,10 @@ docker push us-repo.cloud.mi.com/nuwa/$name
 docker push us-repo.cloud.mi.com/nuwa/$name:$version
 docker push cnbj-repo.cloud.mi.com/nuwa/$name
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker push us-repo.cloud.mi.com/nuwa/$nameflask
+docker push us-repo.cloud.mi.com/nuwa/$nameflask:$version
+docker push cnbj-repo.cloud.mi.com/nuwa/$nameflask
+docker push cnbj-repo.cloud.mi.com/nuwa/$nameflask:$version
 </command>
     </hudson.tasks.Shell>
   </builders>
