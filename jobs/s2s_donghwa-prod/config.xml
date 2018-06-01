@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
@@ -30,15 +31,15 @@
   <builders>
     <hudson.tasks.Shell>
       <command>name=s2s_donghwa
-name-flask=s2s_donghwa-flask
+nameflask=s2s_donghwa-flask
 version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu-prod
 
 # build docker image
 cd flask 
-docker build -f Dockerfile_flask . -t cnbj-repo.cloud.mi.com/nuwa/$name-flask:$version
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name-flask:$version cnbj-repo.cloud.mi.com/nuwa/$name-flask
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name-flask:$version us-repo.cloud.mi.com/nuwa/$name-flask
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name-flask:$version us-repo.cloud.mi.com/nuwa/$name-flask:$version
+docker build -f Dockerfile_flask . -t cnbj-repo.cloud.mi.com/nuwa/$nameflask:$version
+docker tag cnbj-repo.cloud.mi.com/nuwa/$nameflask:$version cnbj-repo.cloud.mi.com/nuwa/$nameflask
+docker tag cnbj-repo.cloud.mi.com/nuwa/$nameflask:$version us-repo.cloud.mi.com/nuwa/$nameflask
+docker tag cnbj-repo.cloud.mi.com/nuwa/$nameflask:$version us-repo.cloud.mi.com/nuwa/$nameflask:$version
 
 cd ../models
 docker build -f Dockerfile_model . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
