@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.com:nuwarobotics/s2s_donghwa.git</url>
+        <url>root@gitea.nuwarobotics.com:nuwarobotics/sens_model.git</url>
         <credentialsId>2b20856e-d4ed-4f8e-8602-e3db593e4c7a</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -30,9 +30,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=s2s_donghwa-prod
-nameflask=s2s_donghwa-prod-flask
-version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu-prod
+      <command>name=sens_model-prod
+nameflask=sens_model-prod-flask
+version=`date +&quot;%Y%m%d_%H%M&quot;`-cpu-prod
 
 # build docker image
 cd flask 
