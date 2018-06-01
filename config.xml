@@ -362,7 +362,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>s2s_aiqing-prod</string>
         <string>s2s_donghwa-prod</string>
-        <string>s2s_module-prod</string>
+        <string>s2s_model-prod</string>
         <string>s2s_shiwu-prod</string>
         <string>sens_model-prod</string>
         <string>sug_model-prod</string>
