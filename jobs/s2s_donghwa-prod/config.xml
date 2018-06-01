@@ -30,8 +30,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=s2s_donghwa
-nameflask=s2s_donghwa-flask
+      <command>name=s2s_donghwa-prod
+nameflask=s2s_donghwa-prod-flask
 version=`date +&quot;%Y%m%d_%H%M&quot;`-gpu-prod
 
 # build docker image
