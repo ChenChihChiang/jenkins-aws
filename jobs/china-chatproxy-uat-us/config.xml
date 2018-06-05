@@ -37,8 +37,8 @@ version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 # build docker image
 docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
-docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:$version 
-d
+docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name
+
 
 #push image to docker-hub, mi
 docker push us-repo.cloud.mi.com/nuwa/$name
