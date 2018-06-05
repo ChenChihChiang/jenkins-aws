@@ -21,7 +21,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>stag</assignedNode>
+  <assignedNode>virginia</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -37,15 +37,16 @@ version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 # build docker image
 docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$version
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name:$version
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:$version nuwarobotics/$name
 
-# tag image
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:222
 
 #push image to docker-hub, mi
-##docker push nuwarobotics/$name:$version
+docker push cnbj-repo.cloud.mi.com/nuwa/$name
 docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-
+docker push us-repo.cloud.mi.com/nuwa/$name
+docker push us-repo.cloud.mi.com/nuwa/$name:$version
 
 #/bin/ssh root@10.161.0.56 &quot;docker rmi -f cnbj-repo.cloud.mi.com/nuwa/$name:222 ; docker pull cnbj-repo.cloud.mi.com/nuwa/$name:222 ;cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker-compose up -d&quot;</command>
     </hudson.tasks.Shell>
