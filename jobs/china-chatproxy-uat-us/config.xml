@@ -36,15 +36,11 @@ version=`date +&quot;%Y%m%d_%H%M&quot;`
 #version=v2
 
 # build docker image
-docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:$version 
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name
-docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:$version 
-
+docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
+docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:$version 
+d
 
 #push image to docker-hub, mi
-docker push cnbj-repo.cloud.mi.com/nuwa/$name
-docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 docker push us-repo.cloud.mi.com/nuwa/$name
 docker push us-repo.cloud.mi.com/nuwa/$name:$version
 
