@@ -88,6 +88,7 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>china-chatproxy-uat</string>
+        <string>china-chatproxy-uat-bj</string>
       </jobNames>
       <jobFilters/>
       <columns>
