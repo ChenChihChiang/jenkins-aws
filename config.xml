@@ -87,6 +87,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>china-chatproxy-prod-bj</string>
         <string>china-chatproxy-uat</string>
         <string>china-chatproxy-uat-bj</string>
         <string>china-chatproxy-uat-us</string>
