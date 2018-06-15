@@ -14,7 +14,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/uat</name>
+        <name>*/prod</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -26,12 +26,12 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <authToken>chat-proxy</authToken>
+  <authToken>chat-proxy-prod</authToken>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=chatproxy-uat
+      <command>name=chatproxy-prod
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 #version=v2
 
