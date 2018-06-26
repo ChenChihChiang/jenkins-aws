@@ -36,7 +36,8 @@ nvm use 8.0.0
 rm -rf ./node_modules
 npm install
 npm run docker-build
-npm run docker-push</command>
+npm run docker-push
+npm run docker-push-cn</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
