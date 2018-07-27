@@ -60,9 +60,11 @@ cd uat/intent
 
 sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:.*/image: cnbj-repo.cloud.mi.com\/nuwa\/&apos;&quot;$name&quot;&apos;:&apos;&quot;$version&quot;&apos;/g&apos; intent_uat.yaml
 
+cd ../../
+
 ./commit.sh $name $version $GIT_BRANCH
 
-#cd ../../
+cd ../../
 
 #git config --global user.name &quot;jenkins-us&quot;
 
