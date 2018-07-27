@@ -50,7 +50,21 @@ if [ ! -f /tmp/testfile.log ]
 then
     git clone https://jenkins:nuWA88**@gitea.nuwarobotics.com/nuwarobotics/k8s-bj-gpu.git
 fi
-    cd k8s-bj-gpu ; git pull</command>
+    cd k8s-bj-gpu ; git pull
+    
+cd uat/intent
+
+/bin/cp intent_uat.yaml1 intent_uat.yaml1.$name.$version
+
+sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:20180705_1251/image: cnbj-repo.cloud.mi.com\/nuwa\/$name:$latest/g&apos; intent_uat.yaml1
+
+cd ../../
+
+git add .
+
+git commit -m &quot;$GIT_BRANCH $GIT_COMMITTER_NAME&quot;
+
+git push origin $GIT_BRANCH</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
