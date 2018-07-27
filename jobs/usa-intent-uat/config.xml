@@ -62,23 +62,13 @@ sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:.*/image: cnbj-re
 
 cd ../../
 
-./commit.sh $name $version master
+git add .
 
-cd ../../
+git commit -m &quot;$name $version&quot;
 
-#git config --global user.name &quot;jenkins-us&quot;
+git push origin master
 
-#git config --global user.email chen.john@nuwarobotics.com
-
-#git $GIT_BRANCHconfig --global core.editor /usr/bin/vi
-
-#git commit --amend --reset-author
-
-#git add .
-
-#git commit -m &quot;$GIT_BRANCH $GIT_COMMITTER_NAME&quot;
-
-#git push origin </command>
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
