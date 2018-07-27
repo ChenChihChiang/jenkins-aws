@@ -35,14 +35,14 @@ version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 # build docker image
 
-#docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
-#docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
-#docker tag us-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:$version
-#docker tag us-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:latest
+docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
+docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
+docker tag us-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker tag us-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:latest
 
 #push image to docker-hub, mi
-#docker push us-repo.cloud.mi.com/nuwa/$name:$version
-#docker push us-repo.cloud.mi.com/nuwa/$name:latest
+docker push us-repo.cloud.mi.com/nuwa/$name:$version
+docker push us-repo.cloud.mi.com/nuwa/$name:latest
 #docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 #docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
 
@@ -56,17 +56,17 @@ fi
     
 cd uat/intent
 
-/bin/cp intent_uat.yaml1 intent_uat.yaml1.$name.$version
+/bin/cp intent_uat.yaml intent_uat.yaml.$name.$version
 
-sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:.*/image: cnbj-repo.cloud.mi.com\/nuwa\/&apos;&quot;&apos;$name&quot;&apos;:&apos;&quot;$version&quot;&apos;/g&apos; intent_uat.yaml1
+sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:.*/image: cnbj-repo.cloud.mi.com\/nuwa\/&apos;&quot;$name&quot;&apos;:&apos;&quot;$version&quot;&apos;/g&apos; intent_uat.yaml
 
-#cd ../../
+cd ../../
 
-#git add .
+git add .
 
-#git commit -m &quot;$GIT_BRANCH $GIT_COMMITTER_NAME&quot;
+git commit -m &quot;$GIT_BRANCH $GIT_COMMITTER_NAME&quot;
 
-#git push origin $GIT_BRANCH</command>
+git push origin $GIT_BRANCH</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
