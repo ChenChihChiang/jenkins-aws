@@ -58,13 +58,13 @@ cd uat/intent
 
 sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:20180705_1251/image: cnbj-repo.cloud.mi.com\/nuwa\/$name:$latest/g&apos; intent_uat.yaml1
 
-cd ../../
+#cd ../../
 
-git add .
+#git add .
 
-git commit -m &quot;$GIT_BRANCH $GIT_COMMITTER_NAME&quot;
+#git commit -m &quot;$GIT_BRANCH $GIT_COMMITTER_NAME&quot;
 
-git push origin $GIT_BRANCH</command>
+#git push origin $GIT_BRANCH</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
