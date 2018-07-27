@@ -57,7 +57,7 @@ cd uat/intent
 
 /bin/cp intent_uat.yaml1 intent_uat.yaml1.$name.$version
 
-sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:.*/image: cnbj-repo.cloud.mi.com\/nuwa\/\$name:\$version/g&apos; intent_uat.yaml1
+sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:.*/image: cnbj-repo.cloud.mi.com\/nuwa\/&quot;$name&quot;:&quot;$version&quot;/g&apos; intent_uat.yaml1
 
 #cd ../../
 
