@@ -60,21 +60,23 @@ cd uat/intent
 
 sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:.*/image: cnbj-repo.cloud.mi.com\/nuwa\/&apos;&quot;$name&quot;&apos;:&apos;&quot;$version&quot;&apos;/g&apos; intent_uat.yaml
 
-cd ../../
+./commit.sh $name $version $GIT_BRANCH
 
-git config --global user.name &quot;jenkins-us&quot;
+#cd ../../
 
-git config --global user.email chen.john@nuwarobotics.com
+#git config --global user.name &quot;jenkins-us&quot;
 
-git config --global core.editor /usr/bin/vi
+#git config --global user.email chen.john@nuwarobotics.com
 
-git commit --amend --reset-author
+#git $GIT_BRANCHconfig --global core.editor /usr/bin/vi
 
-git add .
+#git commit --amend --reset-author
 
-git commit -m &quot;$GIT_BRANCH $GIT_COMMITTER_NAME&quot;
+#git add .
 
-git push origin $GIT_BRANCH</command>
+#git commit -m &quot;$GIT_BRANCH $GIT_COMMITTER_NAME&quot;
+
+#git push origin </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
