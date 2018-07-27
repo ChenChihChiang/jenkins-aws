@@ -66,6 +66,8 @@ git config --global user.name &quot;jenkins-us&quot;
 
 git config --global user.email chen.john@nuwarobotics.com
 
+git config --global core.editor /usr/bin/vi
+
 git commit --amend --reset-author
 
 git checkout uat
