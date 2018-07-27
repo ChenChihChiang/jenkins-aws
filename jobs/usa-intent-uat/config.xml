@@ -46,11 +46,12 @@ docker push us-repo.cloud.mi.com/nuwa/$name:latest
 #docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
 
 
-if [ ! -f /tmp/testfile.log ]
+if [ ! -d ./k8s-bj-gpu ]
 then
     git clone https://jenkins:nuWA88**@gitea.nuwarobotics.com/nuwarobotics/k8s-bj-gpu.git
 fi
     cd k8s-bj-gpu ; git pull
+    
     
 cd uat/intent
 
