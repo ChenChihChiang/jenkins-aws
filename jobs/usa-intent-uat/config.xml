@@ -62,7 +62,7 @@ sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:.*/image: cnbj-re
 
 cd ../../
 
-./commit.sh $name $version $GIT_BRANCH
+./commit.sh $name $version master
 
 cd ../../
 
