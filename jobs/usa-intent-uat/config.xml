@@ -62,6 +62,8 @@ sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:.*/image: cnbj-re
 
 cd ../../
 
+git checkout uat
+
 git add .
 
 git commit -m &quot;$GIT_BRANCH $GIT_COMMITTER_NAME&quot;
