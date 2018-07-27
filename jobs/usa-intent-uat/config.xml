@@ -70,8 +70,6 @@ git config --global core.editor /usr/bin/vi
 
 git commit --amend --reset-author
 
-git checkout uat
-
 git add .
 
 git commit -m &quot;$GIT_BRANCH $GIT_COMMITTER_NAME&quot;
