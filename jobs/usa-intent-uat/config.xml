@@ -40,8 +40,8 @@ docker tag us-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/
 docker tag us-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:latest
 
 #push image to docker-hub, mi
-docker push us-repo.cloud.mi.com/nuwa/$name:$version
-docker push us-repo.cloud.mi.com/nuwa/$name:latest
+#docker push us-repo.cloud.mi.com/nuwa/$name:$version
+#docker push us-repo.cloud.mi.com/nuwa/$name:latest
 #docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
 #docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
 
