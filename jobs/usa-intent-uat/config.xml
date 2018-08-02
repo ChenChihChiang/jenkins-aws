@@ -56,7 +56,7 @@ fi
     
 cd uat/intent
 
-/bin/cp intent_uat.yaml intent_uat.yaml.$name.$version
+/bin/cp intent_uat.yaml intent_uat.yaml.bak
 
 sed -i &apos;s/image: cnbj-repo.cloud.mi.com\/nuwa\/intent-uat:.*/image: cnbj-repo.cloud.mi.com\/nuwa\/&apos;&quot;$name&quot;&apos;:&apos;&quot;$version&quot;&apos;/g&apos; intent_uat.yaml
 
