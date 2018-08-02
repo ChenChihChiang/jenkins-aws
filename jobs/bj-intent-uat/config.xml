@@ -21,7 +21,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>virginia</assignedNode>
+  <assignedNode>beijing</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -35,16 +35,16 @@ version=`date +&quot;%Y%m%d_%H%M&quot;`
 
 # build docker image
 
-docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
-docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
-docker tag us-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:$version
-docker tag us-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:latest
+docker build . -t cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:latest
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:$version
+docker tag cnbj-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name:latest
 
 #push image to docker-hub, mi
-docker push us-repo.cloud.mi.com/nuwa/$name:$version
-docker push us-repo.cloud.mi.com/nuwa/$name:latest
-#docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
-#docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
+#docker push us-repo.cloud.mi.com/nuwa/$name:$version
+#docker push us-repo.cloud.mi.com/nuwa/$name:latest
+docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker push cnbj-repo.cloud.mi.com/nuwa/$name:latest
 
 
 if [ ! -d ./k8s-bj-gpu ]
