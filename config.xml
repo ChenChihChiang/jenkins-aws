@@ -394,6 +394,16 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>chatbot-coordinator</string>
+        <string>init_model</string>
+        <string>new_intent</string>
+        <string>profile_model</string>
+        <string>qa_model</string>
+        <string>qa_score_predictor</string>
+        <string>s2s_aiqing</string>
+        <string>s2s_model</string>
+        <string>s2s_shiwu</string>
+        <string>sens_model</string>
       </jobNames>
       <jobFilters/>
       <columns>
