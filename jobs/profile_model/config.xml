@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.com:nuwarobotics/qa_score_predictor.git</url>
+        <url>root@gitea.nuwarobotics.com:nuwarobotics/profile_model.git</url>
         <credentialsId>2b20856e-d4ed-4f8e-8602-e3db593e4c7a</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -30,8 +30,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name1=qa_score_predictor-uat
-name2=qa_score_predictor-flask-uat
+      <command>name1=profile_model-uat
+name2=profile_model-flask-uat
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 #version=v2
 
