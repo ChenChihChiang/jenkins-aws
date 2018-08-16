@@ -30,26 +30,41 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name=chatbot-coordinator-uat
+      <command>name1=chatbot-coordinator-uat
+name2=chatbot-coordinator-flask-uat
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 #version=v2
 
 # build docker image
 cd models
-docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
-docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$name
-docker tag us-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name
-docker tag us-repo.cloud.mi.com/nuwa/$name:$version cnbj-repo.cloud.mi.com/nuwa/$name:$version
+mv Dockerfile_model Dockerfile
+docker build . -t us-repo.cloud.mi.com/nuwa/$name1:$version
+docker tag us-repo.cloud.mi.com/nuwa/$name1:$version us-repo.cloud.mi.com/nuwa/$name1
+docker tag us-repo.cloud.mi.com/nuwa/$name1:$version cnbj-repo.cloud.mi.com/nuwa/$name1
+docker tag us-repo.cloud.mi.com/nuwa/$name1:$version cnbj-repo.cloud.mi.com/nuwa/$name1:$version
 
+
+cd ../flask
+mv Dockerfile_flask Dockerfile
+docker build . -t us-repo.cloud.mi.com/nuwa/$name:$version
+docker tag us-repo.cloud.mi.com/nuwa/$name2:$version us-repo.cloud.mi.com/nuwa/$name2
+docker tag us-repo.cloud.mi.com/nuwa/$name2:$version cnbj-repo.cloud.mi.com/nuwa/$name2
+docker tag us-repo.cloud.mi.com/nuwa/$name2:$version cnbj-repo.cloud.mi.com/nuwa/$name2:$version
 
 
 #push image to docker-hub, mi
-docker push us-repo.cloud.mi.com/nuwa/$name
-docker push us-repo.cloud.mi.com/nuwa/$name:$version
-docker push cnbj-repo.cloud.mi.com/nuwa/$name
-docker push cnbj-repo.cloud.mi.com/nuwa/$name:$version
+docker push us-repo.cloud.mi.com/nuwa/$name1
+docker push us-repo.cloud.mi.com/nuwa/$name1:$version
+docker push cnbj-repo.cloud.mi.com/nuwa/$name1
+docker push cnbj-repo.cloud.mi.com/nuwa/$name1:$version
 
-#/bin/ssh root@10.161.0.56 &quot;docker rmi -f cnbj-repo.cloud.mi.com/nuwa/$name:222 ; docker pull cnbj-repo.cloud.mi.com/nuwa/$name:222 ;cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker-compose up -d&quot;</command>
+
+docker push us-repo.cloud.mi.com/nuwa/$name2
+docker push us-repo.cloud.mi.com/nuwa/$name2:$version
+docker push cnbj-repo.cloud.mi.com/nuwa/$name2
+docker push cnbj-repo.cloud.mi.com/nuwa/$name2:$version
+
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
