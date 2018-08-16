@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>root@gitea.nuwarobotics.com:nuwarobotics/s2s_aiqing.git</url>
+        <credentialsId>2b20856e-d4ed-4f8e-8602-e3db593e4c7a</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/dev</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <assignedNode>virginia</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>name1=s2s_aiqing-uat
+name2=s2s_aiqing-flask-uat
+version=`date +&quot;%Y%m%d_%H%M&quot;`
+#version=v2
+
+# build docker image
+cd models
+mv Dockerfile_model Dockerfile
+docker build . -t us-repo.cloud.mi.com/nuwa/$name1:$version
+docker tag us-repo.cloud.mi.com/nuwa/$name1:$version us-repo.cloud.mi.com/nuwa/$name1
+docker tag us-repo.cloud.mi.com/nuwa/$name1:$version cnbj-repo.cloud.mi.com/nuwa/$name1
+docker tag us-repo.cloud.mi.com/nuwa/$name1:$version cnbj-repo.cloud.mi.com/nuwa/$name1:$version
+
+
+cd ../flask
+mv Dockerfile_flask Dockerfile
+docker build . -t us-repo.cloud.mi.com/nuwa/$name2:$version
+docker tag us-repo.cloud.mi.com/nuwa/$name2:$version us-repo.cloud.mi.com/nuwa/$name2
+docker tag us-repo.cloud.mi.com/nuwa/$name2:$version cnbj-repo.cloud.mi.com/nuwa/$name2
+docker tag us-repo.cloud.mi.com/nuwa/$name2:$version cnbj-repo.cloud.mi.com/nuwa/$name2:$version
+
+
+#push image to docker-hub, mi
+docker push us-repo.cloud.mi.com/nuwa/$name1
+docker push us-repo.cloud.mi.com/nuwa/$name1:$version
+docker push cnbj-repo.cloud.mi.com/nuwa/$name1
+docker push cnbj-repo.cloud.mi.com/nuwa/$name1:$version
+
+
+docker push us-repo.cloud.mi.com/nuwa/$name2
+docker push us-repo.cloud.mi.com/nuwa/$name2:$version
+docker push cnbj-repo.cloud.mi.com/nuwa/$name2
+docker push cnbj-repo.cloud.mi.com/nuwa/$name2:$version
+
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
