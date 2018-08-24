@@ -88,7 +88,6 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>china-chatproxy-prod-bj</string>
-        <string>china-chatproxy-uat</string>
         <string>china-chatproxy-uat-bj</string>
         <string>china-chatproxy-uat-us</string>
       </jobNames>
@@ -343,36 +342,6 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[11]/jobNames/comparator"/>
         <string>frontend-oauth-admin-stag</string>
-      </jobNames>
-      <jobFilters/>
-      <columns>
-        <hudson.views.StatusColumn/>
-        <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
-        <hudson.views.LastDurationColumn/>
-        <hudson.views.BuildButtonColumn/>
-      </columns>
-      <recurse>false</recurse>
-    </listView>
-    <listView>
-      <owner class="hudson" reference="../../.."/>
-      <name>prod-machine-learning</name>
-      <filterExecutors>false</filterExecutors>
-      <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
-      <jobNames>
-        <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>init_model-prod</string>
-        <string>profile_model-prod</string>
-        <string>qa_model-prod</string>
-        <string>s2s_aiqing-prod</string>
-        <string>s2s_donghwa-prod</string>
-        <string>s2s_model-prod</string>
-        <string>s2s_shiwu-prod</string>
-        <string>sens_model-prod</string>
-        <string>sug_model-prod</string>
       </jobNames>
       <jobFilters/>
       <columns>
