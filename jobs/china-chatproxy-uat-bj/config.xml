@@ -42,8 +42,7 @@ docker tag us-repo.cloud.mi.com/nuwa/$name:$version us-repo.cloud.mi.com/nuwa/$n
 #push image to docker-hub, mi
 docker push us-repo.cloud.mi.com/nuwa/$name
 docker push us-repo.cloud.mi.com/nuwa/$name:$version
-
-#/bin/ssh root@10.161.0.56 &quot;docker rmi -f cnbj-repo.cloud.mi.com/nuwa/$name:222 ; docker pull cnbj-repo.cloud.mi.com/nuwa/$name:222 ;cd /var/app/docker ; docker-compose stop chat-proxy ; docker-compose stop chat-proxy-worker ; docker-compose up -d&quot;</command>
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
