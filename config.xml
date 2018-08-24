@@ -81,30 +81,6 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>intent</name>
-      <filterExecutors>false</filterExecutors>
-      <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
-      <jobNames>
-        <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>china-intent-uat</string>
-        <string>intent-build-docker-japan</string>
-        <string>usa-intent-uat</string>
-      </jobNames>
-      <jobFilters/>
-      <columns>
-        <hudson.views.StatusColumn/>
-        <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
-        <hudson.views.LastDurationColumn/>
-        <hudson.views.BuildButtonColumn/>
-      </columns>
-      <recurse>false</recurse>
-    </listView>
-    <listView>
-      <owner class="hudson" reference="../../.."/>
       <name>new-chatbot</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
