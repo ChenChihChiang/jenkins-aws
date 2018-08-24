@@ -92,7 +92,6 @@
         <string>bj-intent-uat</string>
         <string>china-intent-uat</string>
         <string>intent-build-docker-japan</string>
-        <string>tokyo-intent-dev</string>
         <string>usa-intent-uat</string>
       </jobNames>
       <jobFilters/>
@@ -141,32 +140,6 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>china-uat-chatbot-cpu</string>
         <string>china-uat-chatbot-gpu</string>
-        <string>tokyo-chatbot-gpu-dev</string>
-      </jobNames>
-      <jobFilters/>
-      <columns>
-        <hudson.views.StatusColumn/>
-        <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
-        <hudson.views.LastDurationColumn/>
-        <hudson.views.BuildButtonColumn/>
-      </columns>
-      <recurse>false</recurse>
-    </listView>
-    <listView>
-      <owner class="hudson" reference="../../.."/>
-      <name>tokyo-machine-learning-dev</name>
-      <filterExecutors>false</filterExecutors>
-      <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
-      <jobNames>
-        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[5]/jobNames/comparator"/>
-        <string>tokyo-chatbot-gpu-dev</string>
-        <string>tokyo-chatbotroom-dev</string>
-        <string>tokyo-chatproxy-dev</string>
-        <string>tokyo-intent-dev</string>
       </jobNames>
       <jobFilters/>
       <columns>
