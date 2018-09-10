@@ -88,6 +88,7 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>chatbot-coordinator</string>
+        <string>google_parser</string>
         <string>init_model</string>
         <string>new_intent</string>
         <string>nuwa_brain</string>
