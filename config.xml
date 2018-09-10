@@ -90,6 +90,7 @@
         <string>chatbot-coordinator</string>
         <string>init_model</string>
         <string>new_intent</string>
+        <string>nuwa_brain</string>
         <string>profile_model</string>
         <string>qa_model</string>
         <string>qa_score_predictor</string>
