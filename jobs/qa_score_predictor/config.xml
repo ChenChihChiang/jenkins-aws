@@ -40,29 +40,29 @@ cd models
 mv Dockerfile_model Dockerfile
 docker build . -t us-repo.cloud.mi.com/nuwa/$name1:$version
 docker tag us-repo.cloud.mi.com/nuwa/$name1:$version us-repo.cloud.mi.com/nuwa/$name1
-docker tag us-repo.cloud.mi.com/nuwa/$name1:$version cnbj-repo.cloud.mi.com/nuwa/$name1
-docker tag us-repo.cloud.mi.com/nuwa/$name1:$version cnbj-repo.cloud.mi.com/nuwa/$name1:$version
+#docker tag us-repo.cloud.mi.com/nuwa/$name1:$version cnbj-repo.cloud.mi.com/nuwa/$name1
+#docker tag us-repo.cloud.mi.com/nuwa/$name1:$version cnbj-repo.cloud.mi.com/nuwa/$name1:$version
 
 
 cd ../flask
 mv Dockerfile_flask Dockerfile
 docker build . -t us-repo.cloud.mi.com/nuwa/$name2:$version
 docker tag us-repo.cloud.mi.com/nuwa/$name2:$version us-repo.cloud.mi.com/nuwa/$name2
-docker tag us-repo.cloud.mi.com/nuwa/$name2:$version cnbj-repo.cloud.mi.com/nuwa/$name2
-docker tag us-repo.cloud.mi.com/nuwa/$name2:$version cnbj-repo.cloud.mi.com/nuwa/$name2:$version
+#docker tag us-repo.cloud.mi.com/nuwa/$name2:$version cnbj-repo.cloud.mi.com/nuwa/$name2
+#docker tag us-repo.cloud.mi.com/nuwa/$name2:$version cnbj-repo.cloud.mi.com/nuwa/$name2:$version
 
 
 #push image to docker-hub, mi
 docker push us-repo.cloud.mi.com/nuwa/$name1
 docker push us-repo.cloud.mi.com/nuwa/$name1:$version
-docker push cnbj-repo.cloud.mi.com/nuwa/$name1
-docker push cnbj-repo.cloud.mi.com/nuwa/$name1:$version
+#docker push cnbj-repo.cloud.mi.com/nuwa/$name1
+#docker push cnbj-repo.cloud.mi.com/nuwa/$name1:$version
 
 
 docker push us-repo.cloud.mi.com/nuwa/$name2
 docker push us-repo.cloud.mi.com/nuwa/$name2:$version
-docker push cnbj-repo.cloud.mi.com/nuwa/$name2
-docker push cnbj-repo.cloud.mi.com/nuwa/$name2:$version
+#docker push cnbj-repo.cloud.mi.com/nuwa/$name2
+#docker push cnbj-repo.cloud.mi.com/nuwa/$name2:$version
 
 </command>
     </hudson.tasks.Shell>
