@@ -95,6 +95,7 @@
         <string>profile_model</string>
         <string>qa_model</string>
         <string>qa_score_predictor</string>
+        <string>retrieve_model</string>
         <string>s2s_aiqing</string>
         <string>s2s_model</string>
         <string>s2s_shiwu</string>
