@@ -8,13 +8,13 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>root@gitea.nuwarobotics.com:nuwarobotics/s2s_model.git</url>
+        <url>root@gitea.nuwarobotics.com:nuwarobotics/retrieve_model.git</url>
         <credentialsId>2b20856e-d4ed-4f8e-8602-e3db593e4c7a</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/dev_noredis</name>
+        <name>*/dev_no_redis</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -30,8 +30,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>name1=s2s_model-uat
-name2=s2s_model-flask-uat
+      <command>name1=retrieve_model-uat
+name2=retrieve_model-flask-uat
 version=`date +&quot;%Y%m%d_%H%M&quot;`
 #version=v2
 
