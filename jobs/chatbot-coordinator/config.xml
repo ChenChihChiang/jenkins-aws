@@ -73,9 +73,9 @@ docker tag us-repo.cloud.mi.com/nuwa/$name2:$version cnbj-repo.cloud.mi.com/nuwa
 docker tag us-repo.cloud.mi.com/nuwa/$name2:$version cnbj-repo.cloud.mi.com/nuwa/$name2:$version
 
 docker push us-repo.cloud.mi.com/nuwa/$name2
-docker push us-repo.cloud.mi.com/nuwa/$name2:$version
+#docker push us-repo.cloud.mi.com/nuwa/$name2:$version
 docker push cnbj-repo.cloud.mi.com/nuwa/$name2
-docker push cnbj-repo.cloud.mi.com/nuwa/$name2:$version
+#docker push cnbj-repo.cloud.mi.com/nuwa/$name2:$version
 
 
 </command>
