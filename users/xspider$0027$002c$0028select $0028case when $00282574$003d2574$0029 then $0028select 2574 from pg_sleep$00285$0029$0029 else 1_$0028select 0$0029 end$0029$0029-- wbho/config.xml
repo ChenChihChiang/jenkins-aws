@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>xspider&apos;,(SELECT (CASE WHEN (2574=2574) THEN (SELECT 2574 FROM PG_SLEEP(5)) ELSE 1/(SELECT 0) END))-- wBHo</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>{AQAAABAAAAAwZg8OJ+aj5AaNjC4jJcv/11yOUCK7LZOrzv33vMLJQMa4wv1JEbkBmyQ/O9m1IORt44H7ruh0KM6GeiI8rjqWPQ==}</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20"/>
+    <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.61">
+      <triggers/>
+    </hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>all</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>true</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+  </properties>
+</user>
